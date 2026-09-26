@@ -1,0 +1,107 @@
+[
+  {
+    "year": 1969,
+    "movie": "Midnight Cowboy",
+    "song": "Aquarius/Let the Sunshine In",
+    "artist": "The 5th Dimension",
+    "fact": "Apollo 11 landed Neil Armstrong and Buzz Aldrin on the Moon, and Armstrong's first steps were broadcast to hundreds of millions of viewers. Later that summer, Woodstock drew more than 400,000 people to a dairy farm in New York for three days of music that became a defining image of the counterculture."
+  },
+  {
+    "year": 1973,
+    "movie": "The Exorcist",
+    "song": "Killing Me Softly with His Song",
+    "artist": "Roberta Flack",
+    "fact": "The OPEC oil embargo sent fuel prices soaring and produced long gasoline lines across the United States. Meanwhile, the Watergate scandal tightened around the Nixon White House as televised hearings and court battles made the cover-up a daily public drama."
+  },
+  {
+    "year": 1977,
+    "movie": "Star Wars",
+    "song": "Stayin' Alive",
+    "artist": "Bee Gees",
+    "fact": "George Lucas's space opera opened as a modest-budget film and quickly became a global pop-culture phenomenon, launching a franchise and a merchandising boom. The same year, Elvis Presley died at 42, and NASA launched the Voyager 1 and Voyager 2 probes on missions that would later carry a golden record of Earth's sounds into interstellar space."
+  },
+  {
+    "year": 1980,
+    "movie": "The Empire Strikes Back",
+    "song": "Call Me",
+    "artist": "Blondie",
+    "fact": "Mount St. Helens erupted in Washington, flattening forests and sending ash across much of the United States. In December, John Lennon was shot and killed outside his New York apartment, prompting vigils worldwide."
+  },
+  {
+    "year": 1984,
+    "movie": "Ghostbusters",
+    "song": "When Doves Cry",
+    "artist": "Prince",
+    "fact": "Apple introduced the Macintosh with a Super Bowl ad that framed personal computing as a revolt against conformity. Los Angeles hosted a splashy Summer Olympics, while a leak at the Union Carbide plant in Bhopal, India, became one of history's deadliest industrial disasters."
+  },
+  {
+    "year": 1989,
+    "movie": "Batman",
+    "song": "Like a Prayer",
+    "artist": "Madonna",
+    "fact": "Crowds in Berlin began tearing down the wall that had split the city since 1961, a symbolic collapse of Cold War division in Europe. Nintendo released the Game Boy, putting portable video games into millions of pockets just as Tim Burton's Batman proved that a comic-book film could dominate the summer box office."
+  },
+  {
+    "year": 1991,
+    "movie": "Terminator 2: Judgment Day",
+    "song": "Smells Like Teen Spirit",
+    "artist": "Nirvana",
+    "fact": "The Soviet Union dissolved in December, ending a superpower rivalry that had shaped world politics for decades. Tim Berners-Lee's World Wide Web became publicly available, giving the internet the linked-page model that would later define everyday life online."
+  },
+  {
+    "year": 1994,
+    "movie": "The Lion King",
+    "song": "I'll Make Love to You",
+    "artist": "Boyz II Men",
+    "fact": "Nelson Mandela was elected president of South Africa in the country's first all-race democratic vote, marking the formal end of apartheid. The Channel Tunnel opened, creating a rail link under the English Channel between Britain and France."
+  },
+  {
+    "year": 1997,
+    "movie": "Titanic",
+    "song": "Candle in the Wind 1997",
+    "artist": "Elton John",
+    "fact": "Britain returned Hong Kong to China after more than 150 years of colonial rule, in a midnight handover watched around the world. Princess Diana died in a Paris car crash, and her funeral drew a global television audience of more than a billion people."
+  },
+  {
+    "year": 1999,
+    "movie": "The Matrix",
+    "song": "Smooth",
+    "artist": "Santana",
+    "fact": "The euro was launched as an accounting currency for 11 European countries, laying the groundwork for the later euro banknotes and coins. Napster popularized mass file-sharing of music, jolting the record industry just as fears of a Y2K computer glitch dominated New Year's Eve planning."
+  },
+  {
+    "year": 2001,
+    "movie": "The Lord of the Rings: The Fellowship of the Ring",
+    "song": "Fallin'",
+    "artist": "Alicia Keys",
+    "fact": "Al-Qaeda hijackers attacked the World Trade Center and the Pentagon on September 11, killing nearly 3,000 people and reshaping global security policy. Wikipedia went live that January, beginning as a small collaborative encyclopedia that would grow into one of the web's most-used references."
+  },
+  {
+    "year": 2004,
+    "movie": "Spider-Man 2",
+    "song": "Yeah!",
+    "artist": "Usher",
+    "fact": "Mark Zuckerberg launched Facebook from a Harvard dorm as a campus social network that later scaled worldwide. A massive undersea earthquake in the Indian Ocean triggered a tsunami that killed more than 200,000 people across Indonesia, Sri Lanka, India, Thailand, and other coasts."
+  },
+  {
+    "year": 2008,
+    "movie": "The Dark Knight",
+    "song": "Viva la Vida",
+    "artist": "Coldplay",
+    "fact": "Barack Obama won the U.S. presidency, becoming the first African American elected to the office. The collapse of Lehman Brothers in September accelerated a global financial crisis that pushed governments into emergency bank rescues and stimulus programs."
+  },
+  {
+    "year": 2012,
+    "movie": "The Avengers",
+    "song": "Somebody That I Used to Know",
+    "artist": "Gotye",
+    "fact": "CERN announced the discovery of a particle consistent with the Higgs boson, filling in a long-sought piece of the Standard Model of physics. NASA's Curiosity rover landed in Gale Crater on Mars, beginning a multi-year search for signs that the planet could once have supported life."
+  },
+  {
+    "year": 2015,
+    "movie": "Star Wars: The Force Awakens",
+    "song": "Uptown Funk",
+    "artist": "Mark Ronson",
+    "fact": "NASA's New Horizons spacecraft flew past Pluto, sending back the first close-up images of the dwarf planet's icy mountains and heart-shaped plain. Nearly 200 countries adopted the Paris Agreement, a global pact to limit greenhouse-gas emissions and slow climate change."
+  }
+]
