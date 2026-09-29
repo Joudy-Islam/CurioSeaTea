@@ -1,0 +1,63 @@
+
+.movies-page {
+  min-height: 100vh;
+  background-color: #171c36;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  padding: 30px;
+}
+
+.mood-container {
+  text-align: center;
+  max-width: 650px;
+  width: 100%;
+}
+
+.mood-container h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.mood-container p {
+  color: #cbd0e0;
+  margin-bottom: 35px;
+}
+
+.mood-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.mood-buttons button {
+  background-color: #303653;
+  color: white;
+  border: 1px solid #565d80;
+  border-radius: 15px;
+  padding: 25px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  transition: 0.3s;
+}
+
+.mood-buttons button span {
+  font-size: 35px;
+}
+
+.mood-buttons button:hover {
+  background-color: #6554a4;
+  transform: translateY(-5px);
+}
+
+@media (max-width: 480px) {
+  .mood-buttons {
+    grid-template-columns: 1fr;
+  }
+}
