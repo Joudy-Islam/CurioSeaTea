@@ -2,65 +2,106 @@ import React, { useState } from 'react';
 import data from './data.json';
 
 export default function History() {
-  // This state keeps track of the year the user clicked
-  const [selectedYear, setSelectedYear] = useState(null);
+  const [yearIndex, setYearIndex] = useState(0);
+  const [cardIndex, setCardIndex] = useState(0);
+
+  const currentYear = data[yearIndex];
+
+  // We create the array of exhibits dynamically
+  const exhibits = [
+    { 
+      type: "🎬 Blockbuster", 
+      title: currentYear.movie, 
+      desc: `The most iconic film of ${currentYear.year}.` 
+    },
+    { 
+      type: "🎵 #1 Hit Song", 
+      title: currentYear.song, 
+      desc: `By ${currentYear.artist}` 
+    },
+    { 
+      type: `${currentYear.emoji} Did You Know?`, 
+      title: `History from ${currentYear.year}`, 
+      desc: currentYear.fact 
+    }
+  ];
+
+  // 🌟 NEW LOGIC: If the year has a team, push them into the exhibits array!
+  if (currentYear.team) {
+    currentYear.team.forEach((person) => {
+      exhibits.push({
+        type: `👤 ${person.name} (Born ${currentYear.year})`,
+        title: `🎧 ${person.music} | 🎮 ${person.game}`,
+        desc: `🗣️ Most used phrase: ${person.phrase} | 🏆 ${person.achievement}`
+      });
+    });
+  }
+
+  const currentCard = exhibits[cardIndex];
+
+  const handleYearChange = (e) => {
+    setYearIndex(Number(e.target.value));
+    setCardIndex(0);
+  };
+
+  const nextCard = () => {
+    if (cardIndex === exhibits.length - 1) {
+      setCardIndex(0);
+    } else {
+      setCardIndex(cardIndex + 1);
+    }
+  };
 
   return (
-    // Main background is Deep Chocolate
-    <div className="min-h-screen bg-[#3A170D] text-[#FFF1D0] p-8 font-sans">
-      <h1 className="text-4xl font-bold text-center mb-8 text-[#E2A45F]">
+    <div className="min-h-screen bg-gradient-to-b from-[#1a0a04] via-[#3A170D] to-[#7A3B1C] text-[#FFF1D0] p-8 flex flex-col items-center font-sans">
+      
+      <h1 className="text-4xl font-bold text-center mb-8 text-[#E2A45F] drop-shadow-md">
         The Internet Museum
       </h1>
-      
-      {/* Timeline Buttons Container */}
-      <div className="flex overflow-x-auto gap-4 pb-4 mb-8 border-b border-[#5A2815]">
-        {data.map((item) => (
-          <button
-            key={item.year}
-            onClick={() => setSelectedYear(item)}
-            // If this button is the one clicked, it turns Caramel. Otherwise, Rich Brown.
-            className={`px-4 py-2 rounded-lg whitespace-nowrap transition-colors font-semibold ${
-              selectedYear?.year === item.year
-                ? 'bg-[#C47A3C] text-[#3A170D]'
-                : 'bg-[#7A3B1C] text-[#F4D39B] hover:bg-[#9A5228]'
-            }`}
-          >
-            {item.year}
-          </button>
-        ))}
+
+      {/* Slider UI */}
+      <div className="w-full max-w-md mb-10 bg-[#3A170D]/80 p-4 rounded-lg shadow-lg border border-[#9A5228]">
+        <label className="block text-center text-[#C47A3C] mb-2 font-semibold">
+          Drag to travel to: <span className="text-[#FFF1D0] text-xl">{currentYear.year}</span>
+        </label>
+        <input
+          type="range"
+          min="0"
+          max={data.length - 1}
+          value={yearIndex}
+          onChange={handleYearChange}
+          className="w-full h-3 bg-[#5A2815] rounded-lg appearance-none cursor-pointer accent-[#C47A3C]"
+        />
       </div>
 
       {/* Exhibit Display Area */}
-      {!selectedYear ? (
-        // If no year is selected, show this message
-        <div className="text-center text-[#C47A3C] mt-20">
-          <p className="text-xl">Select a year to explore.</p>
+      <div className="max-w-md w-full bg-[#5A2815]/80 backdrop-blur p-8 rounded-xl shadow-2xl border border-[#9A5228] min-h-[250px] flex flex-col justify-center transition-all duration-300 ease-in-out">
+        
+        <span className="text-xl mb-3 text-[#C47A3C] font-bold">{currentCard.type}</span>
+        <h2 className="text-2xl font-bold text-[#E2A45F] mb-4">
+          {currentCard.title}
+        </h2>
+        <p className="text-[#FFF1D0] italic text-base">
+          {currentCard.desc}
+        </p>
+        
+        {/* Card Indicator Dots */}
+        <div className="flex justify-center gap-2 mt-6">
+          {exhibits.map((_, idx) => (
+            <div key={idx} className={`w-2 h-2 rounded-full ${idx === cardIndex ? 'bg-[#C47A3C]' : 'bg-[#5A2815]'}`}></div>
+          ))}
         </div>
-      ) : (
-        // If a year IS selected, show the museum card
-        <div className="max-w-2xl mx-auto bg-[#5A2815] p-8 rounded-lg shadow-lg border border-[#9A5228]">
-          <h2 className="text-6xl font-bold text-[#E2A45F] mb-6">
-            {selectedYear.year}
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-            <div className="bg-[#3A170D] p-4 rounded-lg">
-              <h3 className="text-lg font-semibold text-[#C47A3C] mb-2">🎬 Blockbuster Movie</h3>
-              <p className="text-[#F4D39B]">{selectedYear.movie}</p>
-            </div>
-            
-            <div className="bg-[#3A170D] p-4 rounded-lg">
-              <h3 className="text-lg font-semibold text-[#C47A3C] mb-2">🎵 #1 Hit Song</h3>
-              <p className="text-[#F4D39B]">{selectedYear.song} by {selectedYear.artist}</p>
-            </div>
-          </div>
+      </div>
 
-          <div className="bg-[#3A170D] p-4 rounded-lg">
-            <h3 className="text-lg font-semibold text-[#C47A3C] mb-2">📜 Did You Know?</h3>
-            <p className="text-[#FFF1D0] italic">{selectedYear.fact}</p>
-          </div>
-        </div>
-      )}
+      {/* Fish Button */}
+      <button 
+        onClick={nextCard}
+        className="mt-8 text-5xl hover:scale-125 transition-transform duration-200 active:scale-90"
+        title="Click the fish to see another exhibit!"
+      >
+        🐟
+      </button>
+      
     </div>
   );
 }

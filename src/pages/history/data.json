@@ -111,6 +111,54 @@
       "fact": "A global financial crisis triggered by the U.S. housing market collapse led to widespread recessions. Barack Obama was elected as the first Black president of the United States.",
       "emoji": "📉"
       },
+      {
+        "year": 2009,
+        "movie": "Avatar",
+        "song": "Poker Face",
+        "artist": "Lady Gaga",
+        "fact": "Bitcoin was introduced to the world by the pseudonymous Satoshi Nakamoto. Michael Jackson's death triggered an unprecedented surge in global internet traffic.",
+        "emoji": "🪙",
+        "team": [
+          {
+            "name": "Joudy",
+            "music": "Justin Bieber",
+            "game": "Talking Angela",
+            "phrase": "“Rate this edit”",
+            "achievement": "Slept for 19 continuous hours 💀"
+          },
+          {
+            "name": "Salma",
+            "music": "podcasts",
+            "game": "Subway Surfers",
+            "phrase": "“wait what?”",
+            "achievement": "Somehow made “I’m just gonna look it up” turn into a 3-hour research session"
+          }
+        ]
+      },
+      {
+        "year": 2010,
+        "movie": "Inception",
+        "song": "Tik Tok",
+        "artist": "Kesha",
+        "fact": "Instagram was launched and gained 1 million users in just 2 months. Apple released the first iPad, creating a new category of tablet devices.",
+        "emoji": "📸",
+        "team": [
+          {
+            "name": "Jana",
+            "music": "Tame Impala",
+            "game": "Feeding Frenzy",
+            "phrase": "“f3ln”",
+            "achievement": "Made it through a whole week without accidentally embarrassing myself 🥳"
+          },
+          {
+            "name": "Sama",
+            "music": "Isabel LaRosa",
+            "game": "Chicken Invaders",
+            "phrase": "“A7ee 7amoottt”",
+            "achievement": "Turned a broken flashlight into an electrical engineering investigation 🤓"
+          }
+        ]
+      },
     {
       "year": 2015,
       "movie": "Mad Max: Fury Road",
