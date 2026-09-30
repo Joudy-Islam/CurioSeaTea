@@ -937,6 +937,733 @@ const moreDesserts = [
     ]
   },
 ];
+const evenMoreBreakfasts = [
+  {
+    name: "Eggs Benedict", emoji: "🥚", type: "Breakfast",
+    ingredients: ["2 English muffins", "4 eggs", "4 slices ham", "2 egg yolks", "100g butter", "Lemon juice"],
+    steps: [
+      "Toast the English muffins and top with ham.",
+      "Poach the eggs until the whites are set.",
+      "Whisk the egg yolks with lemon juice over gentle heat.",
+      "Slowly whisk in melted butter to make hollandaise and spoon over the eggs."
+    ]
+  },
+  {
+    name: "Breakfast quesadilla", emoji: "🫓", type: "Breakfast",
+    ingredients: ["2 tortillas", "2 eggs", "Grated cheese", "Sausage", "Bell pepper", "Salsa"],
+    steps: [
+      "Cook the sausage and sliced pepper.",
+      "Scramble the eggs in the same pan.",
+      "Fill one tortilla with eggs, sausage, pepper and cheese.",
+      "Top with the second tortilla and cook until golden on both sides."
+    ]
+  },
+  {
+    name: "French omelette", emoji: "🍳", type: "Breakfast",
+    ingredients: ["3 eggs", "Butter", "Salt", "Black pepper", "Fresh herbs"],
+    steps: [
+      "Beat the eggs with salt and pepper.",
+      "Melt butter in a non-stick pan over medium-low heat.",
+      "Add the eggs and stir gently until softly set.",
+      "Fold the omelette and finish with fresh herbs."
+    ]
+  },
+  {
+    name: "Breakfast hash", emoji: "🥔", type: "Breakfast",
+    ingredients: ["2 potatoes", "1 onion", "2 eggs", "Bell pepper", "Paprika", "Oil"],
+    steps: [
+      "Dice the potatoes and cook in oil until almost tender.",
+      "Add the onion and pepper and cook until soft.",
+      "Season with paprika.",
+      "Make two wells, crack in the eggs, cover and cook until set."
+    ]
+  },
+  {
+    name: "Peanut butter banana toast", emoji: "🍌", type: "Breakfast",
+    ingredients: ["2 slices wholegrain bread", "Peanut butter", "1 banana", "Honey", "Cinnamon"],
+    steps: [
+      "Toast the bread.",
+      "Spread with peanut butter.",
+      "Top with sliced banana.",
+      "Drizzle with honey and sprinkle with cinnamon."
+    ]
+  },
+  {
+    name: "Breakfast hash browns", emoji: "🥔", type: "Breakfast",
+    ingredients: ["3 potatoes", "1 egg", "2 tbsp flour", "Salt", "Pepper", "Oil"],
+    steps: [
+      "Grate the potatoes and squeeze out excess moisture.",
+      "Mix with the egg, flour, salt and pepper.",
+      "Form into small patties.",
+      "Fry until golden and crispy on both sides."
+    ]
+  },
+  {
+    name: "Berry overnight oats", emoji: "🫐", type: "Breakfast",
+    ingredients: ["1/2 cup oats", "1/2 cup milk", "1/2 cup yoghurt", "Mixed berries", "Honey", "Chia seeds"],
+    steps: [
+      "Mix the oats, milk, yoghurt and chia seeds in a jar.",
+      "Stir well and refrigerate overnight.",
+      "Top with berries in the morning.",
+      "Drizzle with honey and serve cold."
+    ]
+  },
+  {
+    name: "Breakfast sandwich", emoji: "🥪", type: "Breakfast",
+    ingredients: ["2 bread rolls", "2 eggs", "Cheddar", "Bacon", "Butter"],
+    steps: [
+      "Cook the bacon until crisp.",
+      "Scramble or fry the eggs.",
+      "Toast the bread rolls lightly.",
+      "Fill with eggs, bacon and cheddar."
+    ]
+  },
+  {
+    name: "Egg and avocado bowl", emoji: "🥑", type: "Breakfast",
+    ingredients: ["2 eggs", "1 avocado", "Cherry tomatoes", "Spinach", "Toast", "Salt"],
+    steps: [
+      "Cook the eggs to your liking.",
+      "Slice the avocado and tomatoes.",
+      "Put spinach, avocado and tomatoes in a bowl.",
+      "Top with the eggs and serve with toast."
+    ]
+  },
+  {
+    name: "Apple cinnamon porridge", emoji: "🍎", type: "Breakfast",
+    ingredients: ["1/2 cup oats", "1 cup milk", "1 apple", "1 tsp cinnamon", "Honey", "Walnuts"],
+    steps: [
+      "Dice the apple into small pieces.",
+      "Simmer the oats, milk, apple and cinnamon for 5 minutes.",
+      "Pour into a bowl.",
+      "Top with walnuts and honey."
+    ]
+  },
+  {
+    name: "Breakfast French baguette", emoji: "🥖", type: "Breakfast",
+    ingredients: ["1 small baguette", "2 eggs", "Cheese", "Tomato", "Spinach"],
+    steps: [
+      "Slice the baguette lengthways.",
+      "Scramble the eggs.",
+      "Fill the baguette with eggs, cheese, tomato and spinach.",
+      "Toast briefly until the cheese melts."
+    ]
+  },
+  {
+    name: "Berry pancakes", emoji: "🥞", type: "Breakfast",
+    ingredients: ["200g flour", "2 eggs", "250ml milk", "1 tbsp sugar", "100g blueberries", "Butter"],
+    steps: [
+      "Whisk the flour, eggs, milk and sugar into a batter.",
+      "Fold in the blueberries.",
+      "Cook spoonfuls of batter in a buttered pan.",
+      "Flip when bubbles appear and serve warm."
+    ]
+  }
+];
+const evenMoreDesserts = [
+  {
+    name: "Red velvet cake", emoji: "🍰", type: "Dessert",
+    ingredients: ["200g flour", "150g sugar", "2 eggs", "120ml buttermilk", "100g butter", "1 tbsp cocoa", "Red food colouring", "Cream cheese"],
+    steps: [
+      "Heat the oven to 180°C.",
+      "Beat the butter and sugar, then add the eggs.",
+      "Mix in the flour, cocoa, buttermilk and food colouring.",
+      "Bake for 30 minutes, cool, and cover with cream cheese frosting."
+    ]
+  },
+  {
+    name: "Oreo cheesecake", emoji: "🍪", type: "Dessert",
+    ingredients: ["250g Oreo biscuits", "80g butter", "400g cream cheese", "200ml double cream", "80g sugar"],
+    steps: [
+      "Crush the biscuits and mix with melted butter.",
+      "Press the mixture into a cake tin.",
+      "Beat the cream cheese, cream and sugar until thick.",
+      "Spread over the base and chill for 4 hours."
+    ]
+  },
+  {
+    name: "Profiteroles", emoji: "🍫", type: "Dessert",
+    ingredients: ["100g flour", "100g butter", "200ml water", "3 eggs", "Whipped cream", "Chocolate sauce"],
+    steps: [
+      "Heat the water and butter until the butter melts.",
+      "Stir in the flour and cook until the dough pulls away from the pan.",
+      "Beat in the eggs one at a time.",
+      "Pipe small balls and bake at 200°C for 20-25 minutes. Fill with cream and top with chocolate."
+    ]
+  },
+  {
+    name: "Creme brûlée", emoji: "🍮", type: "Dessert",
+    ingredients: ["500ml double cream", "5 egg yolks", "80g sugar", "1 tsp vanilla", "Extra sugar"],
+    steps: [
+      "Heat the cream and vanilla until warm.",
+      "Whisk the egg yolks with sugar.",
+      "Slowly mix in the warm cream.",
+      "Bake in ramekins at 150°C until just set, chill, then sprinkle with sugar and caramelise."
+    ]
+  },
+  {
+    name: "Key lime pie", emoji: "🥧", type: "Dessert",
+    ingredients: ["200g digestive biscuits", "80g butter", "400g condensed milk", "3 egg yolks", "120ml lime juice", "Lime zest"],
+    steps: [
+      "Crush the biscuits and mix with melted butter.",
+      "Press into a pie dish.",
+      "Mix condensed milk, egg yolks, lime juice and zest.",
+      "Pour over the base and bake at 170°C for 15 minutes. Chill before serving."
+    ]
+  },
+  {
+    name: "Blueberry muffins", emoji: "🫐", type: "Dessert",
+    ingredients: ["250g flour", "120g sugar", "2 tsp baking powder", "1 egg", "200ml milk", "80g butter", "150g blueberries"],
+    steps: [
+      "Heat the oven to 180°C and line a muffin tin.",
+      "Mix the flour, sugar and baking powder.",
+      "Add the egg, milk and melted butter.",
+      "Fold in the blueberries and bake for 20-25 minutes."
+    ]
+  },
+  {
+    name: "Lemon drizzle cake", emoji: "🍋", type: "Dessert",
+    ingredients: ["200g flour", "150g sugar", "150g butter", "3 eggs", "2 lemons", "1 tsp baking powder"],
+    steps: [
+      "Heat the oven to 180°C.",
+      "Beat the butter and sugar, then add the eggs.",
+      "Fold in the flour, baking powder and lemon zest.",
+      "Bake for 35 minutes and drizzle with lemon juice and sugar while warm."
+    ]
+  },
+  {
+    name: "Pistachio pudding", emoji: "🍮", type: "Dessert",
+    ingredients: ["500ml milk", "50g sugar", "30g cornflour", "2 tbsp pistachio paste", "Chopped pistachios"],
+    steps: [
+      "Whisk the milk, sugar and cornflour in a saucepan.",
+      "Heat gently while stirring until thick.",
+      "Stir in the pistachio paste.",
+      "Pour into bowls, chill, and top with chopped pistachios."
+    ]
+  },
+  {
+    name: "Mango sorbet", emoji: "🥭", type: "Dessert",
+    ingredients: ["2 ripe mangoes", "100g sugar", "100ml water", "Lime juice"],
+    steps: [
+      "Blend the mango flesh until smooth.",
+      "Heat the sugar and water until dissolved, then cool.",
+      "Mix the syrup with mango and lime juice.",
+      "Freeze for 4-5 hours, stirring occasionally."
+    ]
+  },
+  {
+    name: "Chocolate truffles", emoji: "🍫", type: "Dessert",
+    ingredients: ["200g dark chocolate", "100ml double cream", "30g butter", "Cocoa powder"],
+    steps: [
+      "Heat the cream until just simmering.",
+      "Pour over the chocolate and butter.",
+      "Stir until smooth and chill for 2 hours.",
+      "Roll into balls and coat with cocoa powder."
+    ]
+  },
+  {
+    name: "Peach cobbler", emoji: "🍑", type: "Dessert",
+    ingredients: ["4 peaches", "150g flour", "80g sugar", "100g butter", "1 tsp baking powder", "100ml milk"],
+    steps: [
+      "Heat the oven to 190°C.",
+      "Slice the peaches and place them in a baking dish.",
+      "Mix the flour, sugar, butter, baking powder and milk into a soft batter.",
+      "Spoon over the peaches and bake for 35 minutes."
+    ]
+  },
+  {
+    name: "Black Forest cake", emoji: "🍒", type: "Dessert",
+    ingredients: ["Chocolate sponge", "200ml whipped cream", "Cherries", "Chocolate shavings", "Cherry syrup"],
+    steps: [
+      "Slice the chocolate sponge into two or three layers.",
+      "Brush each layer with a little cherry syrup.",
+      "Add whipped cream and cherries between the layers.",
+      "Cover with more cream, cherries and chocolate shavings."
+    ]
+  },
+  {
+    name: "Vanilla cupcakes", emoji: "🧁", type: "Dessert",
+    ingredients: ["150g flour", "120g sugar", "120g butter", "2 eggs", "1 tsp vanilla", "1 tsp baking powder", "Buttercream"],
+    steps: [
+      "Heat the oven to 180°C and line a muffin tin.",
+      "Beat the butter and sugar until fluffy.",
+      "Add the eggs and vanilla, then fold in the flour and baking powder.",
+      "Bake for 18-20 minutes and decorate with buttercream."
+    ]
+  },
+  {
+    name: "Chocolate cupcakes", emoji: "🧁", type: "Dessert",
+    ingredients: ["150g flour", "120g sugar", "30g cocoa powder", "2 eggs", "120ml milk", "100g butter", "Chocolate frosting"],
+    steps: [
+      "Heat the oven to 180°C.",
+      "Mix the flour, sugar and cocoa powder.",
+      "Add the eggs, milk and melted butter.",
+      "Bake for 18-20 minutes and decorate with chocolate frosting."
+    ]
+  },
+  {
+    name: "Strawberry mousse", emoji: "🍓", type: "Dessert",
+    ingredients: ["300g strawberries", "200ml double cream", "50g sugar", "1 tsp lemon juice"],
+    steps: [
+      "Blend the strawberries with the sugar and lemon juice.",
+      "Whip the cream until soft peaks form.",
+      "Fold the strawberry mixture into the cream.",
+      "Spoon into glasses and chill for 2 hours."
+    ]
+  },
+  {
+    name: "Mango cheesecake cups", emoji: "🥭", type: "Dessert",
+    ingredients: ["Digestive biscuits", "Cream cheese", "Mango", "Icing sugar", "Double cream"],
+    steps: [
+      "Crush the biscuits and place them in the bottom of glasses.",
+      "Beat the cream cheese, icing sugar and cream until smooth.",
+      "Spoon the mixture over the biscuit base.",
+      "Top with diced mango and chill."
+    ]
+  },
+  {
+    name: "Caramel flan", emoji: "🍮", type: "Dessert",
+    ingredients: ["100g sugar", "500ml milk", "4 eggs", "80g sugar", "1 tsp vanilla"],
+    steps: [
+      "Melt the sugar in a pan until golden and pour into a dish.",
+      "Whisk the eggs, milk, sugar and vanilla.",
+      "Pour over the caramel.",
+      "Bake in a water bath at 160°C for about 45 minutes, then chill."
+    ]
+  },
+  {
+    name: "Chocolate tart", emoji: "🍫", type: "Dessert",
+    ingredients: ["Shortcrust pastry", "200g dark chocolate", "200ml double cream", "30g butter", "2 tbsp sugar"],
+    steps: [
+      "Bake the pastry blind until golden.",
+      "Heat the cream and pour it over the chocolate.",
+      "Stir in the butter and sugar until smooth.",
+      "Pour into the pastry and chill until set."
+    ]
+  },
+  {
+    name: "Raspberry crumble", emoji: "🫐", type: "Dessert",
+    ingredients: ["300g raspberries", "120g flour", "80g butter", "70g sugar", "1 tsp vanilla"],
+    steps: [
+      "Heat the oven to 190°C.",
+      "Place the raspberries in a baking dish.",
+      "Rub the butter into the flour and sugar.",
+      "Cover the berries with the crumble and bake for 30 minutes."
+    ]
+  },
+  {
+    name: "Orange cake", emoji: "🍊", type: "Dessert",
+    ingredients: ["200g flour", "150g sugar", "150g butter", "3 eggs", "1 orange", "1 tsp baking powder"],
+    steps: [
+      "Heat the oven to 180°C.",
+      "Beat the butter and sugar together.",
+      "Add the eggs, orange zest, orange juice, flour and baking powder.",
+      "Bake for 35-40 minutes."
+    ]
+  },
+  {
+    name: "Chocolate orange mousse", emoji: "🍊", type: "Dessert",
+    ingredients: ["200g dark chocolate", "3 eggs", "200ml double cream", "1 orange", "2 tbsp sugar"],
+    steps: [
+      "Melt the chocolate and let it cool slightly.",
+      "Mix in the egg yolks and orange zest.",
+      "Whip the cream and fold it into the chocolate.",
+      "Whisk the egg whites with sugar and fold them in. Chill for 3 hours."
+    ]
+  },
+  {
+    name: "Apple pie", emoji: "🥧", type: "Dessert",
+    ingredients: ["Shortcrust pastry", "5 apples", "80g sugar", "1 tsp cinnamon", "20g butter"],
+    steps: [
+      "Heat the oven to 190°C.",
+      "Slice the apples and mix with sugar and cinnamon.",
+      "Line a pie dish with pastry and add the apples.",
+      "Cover with more pastry, add butter, and bake for 40-45 minutes."
+    ]
+  },
+  {
+    name: "Bread pudding", emoji: "🍞", type: "Dessert",
+    ingredients: ["6 slices bread", "500ml milk", "2 eggs", "80g sugar", "Raisins", "Cinnamon", "Butter"],
+    steps: [
+      "Cut the bread into pieces and place in a buttered dish.",
+      "Whisk the milk, eggs, sugar and cinnamon.",
+      "Pour over the bread and sprinkle with raisins.",
+      "Bake at 180°C for 35-40 minutes."
+    ]
+  },
+  {
+    name: "Rice crispy treats", emoji: "🍚", type: "Dessert",
+    ingredients: ["150g crispy rice cereal", "200g marshmallows", "50g butter"],
+    steps: [
+      "Melt the butter in a saucepan.",
+      "Add the marshmallows and stir until melted.",
+      "Remove from the heat and stir in the cereal.",
+      "Press into a lined tin, cool, and cut into squares."
+    ]
+  },
+  {
+    name: "Fudge", emoji: "🍫", type: "Dessert",
+    ingredients: ["400g condensed milk", "300g chocolate", "50g butter", "1 tsp vanilla"],
+    steps: [
+      "Melt the chocolate, condensed milk and butter together.",
+      "Stir until completely smooth.",
+      "Mix in the vanilla.",
+      "Pour into a lined tin, chill until firm, and cut into squares."
+    ]
+  },
+  {
+    name: "Chocolate pudding", emoji: "🍮", type: "Dessert",
+    ingredients: ["500ml milk", "50g cocoa powder", "60g sugar", "30g cornflour", "100g chocolate"],
+    steps: [
+      "Whisk the milk, cocoa, sugar and cornflour in a saucepan.",
+      "Heat while stirring until thick.",
+      "Add the chocolate and stir until melted.",
+      "Pour into bowls and chill before serving."
+    ]
+  },
+  {
+    name: "Strawberry icebox cake", emoji: "🍓", type: "Dessert",
+    ingredients: ["Digestive biscuits", "300ml double cream", "50g icing sugar", "Strawberries", "Vanilla"],
+    steps: [
+      "Whip the cream with icing sugar and vanilla.",
+      "Layer biscuits, cream and sliced strawberries in a dish.",
+      "Repeat the layers.",
+      "Chill overnight until the biscuits soften."
+    ]
+  },
+  {
+    name: "Coconut rice pudding", emoji: "🥥", type: "Dessert",
+    ingredients: ["100g pudding rice", "400ml coconut milk", "300ml milk", "60g sugar", "Mango"],
+    steps: [
+      "Put the rice, coconut milk, milk and sugar in a saucepan.",
+      "Simmer gently for 35-40 minutes, stirring regularly.",
+      "Spoon into bowls and cool slightly.",
+      "Top with diced mango."
+    ]
+  },
+  {
+    name: "Baklava", emoji: "🥮", type: "Dessert",
+    ingredients: ["Filo pastry", "150g chopped walnuts", "100g butter", "100g sugar", "100ml water", "Honey"],
+    steps: [
+      "Layer sheets of filo pastry with melted butter and chopped walnuts.",
+      "Cut into diamonds before baking.",
+      "Bake at 180°C for 30-35 minutes until golden.",
+      "Pour over warm honey syrup and let cool."
+    ]
+  },
+  {
+    name: "Kunafa", emoji: "🍮", type: "Dessert",
+    ingredients: ["Kunafa pastry", "150g butter", "200g mozzarella", "100g sugar", "100ml water", "Pistachios"],
+    steps: [
+      "Mix the kunafa pastry with melted butter.",
+      "Press half into a baking dish and add the mozzarella.",
+      "Cover with the remaining pastry.",
+      "Bake at 180°C until golden, then pour over sugar syrup and top with pistachios."
+    ]
+  },
+  {
+    name: "Basbousa", emoji: "🍰", type: "Dessert",
+    ingredients: ["250g semolina", "100g sugar", "100g yoghurt", "100g butter", "Almonds", "Sugar syrup"],
+    steps: [
+      "Mix the semolina, sugar, yoghurt and melted butter.",
+      "Spread into a greased baking dish and score into squares.",
+      "Place an almond on each piece.",
+      "Bake at 180°C until golden and pour over sugar syrup."
+    ]
+  }
+];
+const evenMoreSnacks = [
+  {
+    name: "Mozzarella tomato toast", emoji: "🍅", type: "Snack",
+    ingredients: ["Sourdough bread", "Mozzarella", "Cherry tomatoes", "Basil", "Olive oil", "Salt"],
+    steps: [
+      "Toast the bread until golden.",
+      "Top with sliced mozzarella and cherry tomatoes.",
+      "Drizzle with olive oil and add basil.",
+      "Season with salt and serve."
+    ]
+  },
+  {
+    name: "Corn ribs", emoji: "🌽", type: "Snack",
+    ingredients: ["2 corn cobs", "2 tbsp olive oil", "1 tsp paprika", "1 tsp garlic powder", "Parmesan"],
+    steps: [
+      "Cut each corn cob into long quarters.",
+      "Toss with olive oil, paprika and garlic powder.",
+      "Bake at 200°C for 20-25 minutes until golden.",
+      "Sprinkle with parmesan and serve."
+    ]
+  },
+  {
+    name: "Crispy chickpeas", emoji: "🫘", type: "Snack",
+    ingredients: ["1 can chickpeas", "2 tbsp olive oil", "1 tsp paprika", "1 tsp cumin", "Salt"],
+    steps: [
+      "Drain and dry the chickpeas very well.",
+      "Toss with olive oil, paprika, cumin and salt.",
+      "Spread on a baking tray.",
+      "Bake at 200°C for 25-30 minutes until crispy."
+    ]
+  },
+  {
+    name: "Tuna cucumber bites", emoji: "🥒", type: "Snack",
+    ingredients: ["1 can tuna", "2 tbsp mayonnaise", "Cucumber", "Lemon juice", "Black pepper"],
+    steps: [
+      "Drain the tuna and mix with mayonnaise and lemon juice.",
+      "Slice the cucumber into thick rounds.",
+      "Spoon the tuna mixture onto each cucumber slice.",
+      "Season with black pepper and serve."
+    ]
+  },
+  {
+    name: "Mini spinach pastries", emoji: "🥬", type: "Snack",
+    ingredients: ["Puff pastry", "Spinach", "Feta", "1 egg", "Black pepper"],
+    steps: [
+      "Cook the spinach briefly and squeeze out excess water.",
+      "Mix with crumbled feta and black pepper.",
+      "Cut the pastry into squares and add the filling.",
+      "Fold and bake at 200°C for 15-20 minutes."
+    ]
+  },
+  {
+    name: "Halloumi fries", emoji: "🧀", type: "Snack",
+    ingredients: ["250g halloumi", "2 tbsp flour", "Paprika", "Olive oil", "Lemon"],
+    steps: [
+      "Cut the halloumi into thick sticks.",
+      "Coat lightly with flour and paprika.",
+      "Fry in a little olive oil until golden on all sides.",
+      "Serve with a squeeze of lemon."
+    ]
+  },
+  {
+    name: "Tortilla pinwheels", emoji: "🌯", type: "Snack",
+    ingredients: ["2 tortillas", "Cream cheese", "Turkey slices", "Cheddar", "Lettuce"],
+    steps: [
+      "Spread cream cheese over each tortilla.",
+      "Add turkey, cheddar and lettuce.",
+      "Roll each tortilla tightly.",
+      "Slice into small pinwheels."
+    ]
+  },
+  {
+    name: "Sweetcorn fritters", emoji: "🌽", type: "Snack",
+    ingredients: ["1 can sweetcorn", "1 egg", "80g flour", "50ml milk", "Spring onions", "Salt"],
+    steps: [
+      "Drain the sweetcorn and mix with the egg, flour and milk.",
+      "Stir in the spring onions and salt.",
+      "Spoon the mixture into a hot oiled pan.",
+      "Cook for 2-3 minutes per side until golden."
+    ]
+  },
+  {
+    name: "Zucchini fritters", emoji: "🥒", type: "Snack",
+    ingredients: ["2 courgettes", "1 egg", "60g flour", "50g grated cheese", "Garlic", "Salt"],
+    steps: [
+      "Grate the courgettes and squeeze out as much water as possible.",
+      "Mix with the egg, flour, cheese and garlic.",
+      "Spoon into a hot pan and flatten slightly.",
+      "Cook for 3-4 minutes per side until golden."
+    ]
+  },
+  {
+    name: "Tuna melts", emoji: "🐟", type: "Snack",
+    ingredients: ["2 slices bread", "1 can tuna", "2 tbsp mayonnaise", "Cheddar", "Sweetcorn"],
+    steps: [
+      "Mix the tuna with mayonnaise and sweetcorn.",
+      "Spread the mixture onto the bread.",
+      "Top with cheddar.",
+      "Grill until the cheese is melted and bubbling."
+    ]
+  },
+  {
+    name: "Cucumber cream cheese bites", emoji: "🥒", type: "Snack",
+    ingredients: ["Cucumber", "Cream cheese", "Dill", "Cracked pepper", "Lemon"],
+    steps: [
+      "Slice the cucumber into thick rounds.",
+      "Mix the cream cheese with dill and lemon.",
+      "Spoon the cream cheese onto the cucumber.",
+      "Finish with cracked pepper."
+    ]
+  },
+  {
+    name: "Pita chips", emoji: "🫓", type: "Snack",
+    ingredients: ["3 pita breads", "Olive oil", "Paprika", "Garlic powder", "Salt"],
+    steps: [
+      "Cut the pita breads into triangles.",
+      "Toss with olive oil, paprika, garlic powder and salt.",
+      "Spread on a baking tray.",
+      "Bake at 190°C for 8-10 minutes until crisp."
+    ]
+  },
+  {
+    name: "Crispy potato cubes", emoji: "🥔", type: "Snack",
+    ingredients: ["3 potatoes", "Olive oil", "Paprika", "Garlic powder", "Salt"],
+    steps: [
+      "Cut the potatoes into small cubes.",
+      "Toss with oil, paprika, garlic powder and salt.",
+      "Spread them out on a baking tray.",
+      "Bake at 220°C for 30 minutes until crispy."
+    ]
+  },
+  {
+    name: "Mini meatballs", emoji: "🍖", type: "Snack",
+    ingredients: ["300g minced beef", "1 egg", "50g breadcrumbs", "Garlic", "Parsley", "Salt"],
+    steps: [
+      "Mix the beef, egg, breadcrumbs, garlic and parsley.",
+      "Roll into small meatballs.",
+      "Place on a baking tray.",
+      "Bake at 200°C for 15-18 minutes."
+    ]
+  },
+  {
+    name: "Stuffed jalapeños", emoji: "🌶️", type: "Snack",
+    ingredients: ["8 jalapeños", "100g cream cheese", "50g cheddar", "Breadcrumbs"],
+    steps: [
+      "Slice the jalapeños lengthways and remove the seeds.",
+      "Mix the cream cheese and cheddar.",
+      "Fill each jalapeño with the cheese mixture.",
+      "Top with breadcrumbs and bake at 200°C for 15 minutes."
+    ]
+  },
+  {
+    name: "Crispy tofu bites", emoji: "🍱", type: "Snack",
+    ingredients: ["300g firm tofu", "2 tbsp soy sauce", "2 tbsp cornflour", "Garlic powder", "Sesame seeds"],
+    steps: [
+      "Cut the tofu into small cubes and pat dry.",
+      "Toss with soy sauce, cornflour and garlic powder.",
+      "Bake at 220°C for 25 minutes, turning halfway.",
+      "Sprinkle with sesame seeds."
+    ]
+  },
+  {
+    name: "Pesto pinwheels", emoji: "🌿", type: "Snack",
+    ingredients: ["Puff pastry", "Pesto", "Grated mozzarella", "Cherry tomatoes"],
+    steps: [
+      "Spread pesto over the puff pastry.",
+      "Sprinkle with mozzarella and chopped tomatoes.",
+      "Roll tightly and cut into slices.",
+      "Bake at 200°C for 15 minutes."
+    ]
+  },
+  {
+    name: "Egg salad crackers", emoji: "🥚", type: "Snack",
+    ingredients: ["3 eggs", "2 tbsp mayonnaise", "1 tsp mustard", "Crackers", "Chives"],
+    steps: [
+      "Boil the eggs for 10 minutes and cool them.",
+      "Chop the eggs and mix with mayonnaise and mustard.",
+      "Spoon the mixture onto crackers.",
+      "Top with chopped chives."
+    ]
+  },
+  {
+    name: "Avocado cucumber rolls", emoji: "🥑", type: "Snack",
+    ingredients: ["1 avocado", "1 cucumber", "Lime juice", "Chilli flakes", "Salt"],
+    steps: [
+      "Mash the avocado with lime juice, salt and chilli flakes.",
+      "Slice the cucumber lengthways into thin strips.",
+      "Spread avocado along each strip.",
+      "Roll up and serve chilled."
+    ]
+  },
+  {
+    name: "Mini corn dogs", emoji: "🌭", type: "Snack",
+    ingredients: ["Mini sausages", "100g cornmeal", "100g flour", "1 egg", "150ml milk", "Oil"],
+    steps: [
+      "Mix the cornmeal, flour, egg and milk into a thick batter.",
+      "Dip each mini sausage into the batter.",
+      "Fry until golden brown.",
+      "Drain on kitchen paper and serve."
+    ]
+  },
+  {
+    name: "Roasted pumpkin seeds", emoji: "🎃", type: "Snack",
+    ingredients: ["1 cup pumpkin seeds", "1 tbsp olive oil", "Paprika", "Salt"],
+    steps: [
+      "Rinse and dry the pumpkin seeds.",
+      "Toss with olive oil, paprika and salt.",
+      "Spread on a baking tray.",
+      "Bake at 180°C for 12-15 minutes."
+    ]
+  },
+  {
+    name: "Brie toast", emoji: "🧀", type: "Snack",
+    ingredients: ["2 slices bread", "Brie cheese", "Honey", "Walnuts"],
+    steps: [
+      "Toast the bread until golden.",
+      "Add slices of brie.",
+      "Drizzle with honey.",
+      "Top with chopped walnuts."
+    ]
+  },
+  {
+    name: "Ham and cheese pinwheels", emoji: "🥐", type: "Snack",
+    ingredients: ["Puff pastry", "Ham", "Cheddar", "1 egg"],
+    steps: [
+      "Lay ham and cheese over the puff pastry.",
+      "Roll the pastry tightly.",
+      "Cut into rounds and place on a baking tray.",
+      "Brush with egg and bake at 200°C for 15 minutes."
+    ]
+  },
+  {
+    name: "Carrot fries", emoji: "🥕", type: "Snack",
+    ingredients: ["4 carrots", "2 tbsp olive oil", "Paprika", "Garlic powder", "Salt"],
+    steps: [
+      "Cut the carrots into thick sticks.",
+      "Toss with olive oil, paprika, garlic powder and salt.",
+      "Spread on a baking tray.",
+      "Bake at 220°C for 20-25 minutes."
+    ]
+  },
+  {
+    name: "Parmesan crisps", emoji: "🧀", type: "Snack",
+    ingredients: ["150g grated parmesan", "Black pepper", "Paprika"],
+    steps: [
+      "Heat the oven to 200°C.",
+      "Place small piles of parmesan on a lined baking tray.",
+      "Sprinkle with pepper and paprika.",
+      "Bake for 5-7 minutes until golden and crisp."
+    ]
+  },
+  {
+    name: "Peanut butter toast", emoji: "🥜", type: "Snack",
+    ingredients: ["2 slices bread", "Peanut butter", "Banana", "Honey", "Cinnamon"],
+    steps: [
+      "Toast the bread.",
+      "Spread generously with peanut butter.",
+      "Add sliced banana.",
+      "Drizzle with honey and sprinkle with cinnamon."
+    ]
+  },
+  {
+    name: "Mini baked potatoes", emoji: "🥔", type: "Snack",
+    ingredients: ["Baby potatoes", "Olive oil", "Salt", "Sour cream", "Chives"],
+    steps: [
+      "Toss the baby potatoes with olive oil and salt.",
+      "Bake at 200°C for 30-35 minutes.",
+      "Cut a small slit in each potato.",
+      "Top with sour cream and chives."
+    ]
+  },
+  {
+    name: "Rice paper rolls", emoji: "🥬", type: "Snack",
+    ingredients: ["Rice paper sheets", "Carrot", "Cucumber", "Lettuce", "Cooked prawns", "Sweet chilli sauce"],
+    steps: [
+      "Soak a rice paper sheet in warm water until soft.",
+      "Add lettuce, carrot, cucumber and prawns.",
+      "Fold in the sides and roll tightly.",
+      "Serve with sweet chilli sauce."
+    ]
+  },
+  {
+    name: "Cheese quesadilla bites", emoji: "🫓", type: "Snack",
+    ingredients: ["2 tortillas", "Grated cheddar", "Mozzarella", "Salsa"],
+    steps: [
+      "Cover one tortilla with both cheeses.",
+      "Place the second tortilla on top.",
+      "Cook in a dry pan until golden on both sides.",
+      "Cut into small triangles and serve with salsa."
+    ]
+  }
+];
+
  
 const foods = [
   ...breakfasts, ...meals, ...snacks, ...desserts,
@@ -948,14 +1675,25 @@ const btnJS= document.getElementById("btn");
 const recipeBtn = document.getElementById("recipeBtn")
 let lastPick = null;
 let currentFood = null;
+const filter = document.getElementById("filter");
+
 function pickFood() {
-    let food;
-    do {
-        food = foods[Math.floor(Math.random() * foods.length)];
-    } while (food === lastPick && foods.length > 1);
-lastPick = food;
-return food;
+  const selectedType = filter.value;
+
+  const availableFoods = selectedType === "all"
+    ? foods
+    : foods.filter(food => food.type === selectedType);
+
+  let food;
+
+  do {
+    food = availableFoods[Math.floor(Math.random() * availableFoods.length)];
+  } while (food === lastPick && availableFoods.length > 1);
+
+  lastPick = food;
+  return food;
 }
+
 btnJS.addEventListener("click", function() {
     const food = pickFood();
     currentFood = food;
