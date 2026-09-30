@@ -1,107 +1,122 @@
 [
-  {
-    "year": 1969,
-    "movie": "Midnight Cowboy",
-    "song": "Aquarius/Let the Sunshine In",
-    "artist": "The 5th Dimension",
-    "fact": "Apollo 11 landed Neil Armstrong and Buzz Aldrin on the Moon, and Armstrong's first steps were broadcast to hundreds of millions of viewers. Later that summer, Woodstock drew more than 400,000 people to a dairy farm in New York for three days of music that became a defining image of the counterculture."
-  },
-  {
-    "year": 1973,
-    "movie": "The Exorcist",
-    "song": "Killing Me Softly with His Song",
-    "artist": "Roberta Flack",
-    "fact": "The OPEC oil embargo sent fuel prices soaring and produced long gasoline lines across the United States. Meanwhile, the Watergate scandal tightened around the Nixon White House as televised hearings and court battles made the cover-up a daily public drama."
-  },
-  {
-    "year": 1977,
-    "movie": "Star Wars",
-    "song": "Stayin' Alive",
-    "artist": "Bee Gees",
-    "fact": "George Lucas's space opera opened as a modest-budget film and quickly became a global pop-culture phenomenon, launching a franchise and a merchandising boom. The same year, Elvis Presley died at 42, and NASA launched the Voyager 1 and Voyager 2 probes on missions that would later carry a golden record of Earth's sounds into interstellar space."
-  },
-  {
-    "year": 1980,
-    "movie": "The Empire Strikes Back",
-    "song": "Call Me",
-    "artist": "Blondie",
-    "fact": "Mount St. Helens erupted in Washington, flattening forests and sending ash across much of the United States. In December, John Lennon was shot and killed outside his New York apartment, prompting vigils worldwide."
-  },
-  {
-    "year": 1984,
-    "movie": "Ghostbusters",
-    "song": "When Doves Cry",
-    "artist": "Prince",
-    "fact": "Apple introduced the Macintosh with a Super Bowl ad that framed personal computing as a revolt against conformity. Los Angeles hosted a splashy Summer Olympics, while a leak at the Union Carbide plant in Bhopal, India, became one of history's deadliest industrial disasters."
-  },
-  {
-    "year": 1989,
-    "movie": "Batman",
-    "song": "Like a Prayer",
-    "artist": "Madonna",
-    "fact": "Crowds in Berlin began tearing down the wall that had split the city since 1961, a symbolic collapse of Cold War division in Europe. Nintendo released the Game Boy, putting portable video games into millions of pockets just as Tim Burton's Batman proved that a comic-book film could dominate the summer box office."
-  },
-  {
-    "year": 1991,
-    "movie": "Terminator 2: Judgment Day",
-    "song": "Smells Like Teen Spirit",
-    "artist": "Nirvana",
-    "fact": "The Soviet Union dissolved in December, ending a superpower rivalry that had shaped world politics for decades. Tim Berners-Lee's World Wide Web became publicly available, giving the internet the linked-page model that would later define everyday life online."
-  },
-  {
-    "year": 1994,
-    "movie": "The Lion King",
-    "song": "I'll Make Love to You",
-    "artist": "Boyz II Men",
-    "fact": "Nelson Mandela was elected president of South Africa in the country's first all-race democratic vote, marking the formal end of apartheid. The Channel Tunnel opened, creating a rail link under the English Channel between Britain and France."
-  },
-  {
-    "year": 1997,
-    "movie": "Titanic",
-    "song": "Candle in the Wind 1997",
-    "artist": "Elton John",
-    "fact": "Britain returned Hong Kong to China after more than 150 years of colonial rule, in a midnight handover watched around the world. Princess Diana died in a Paris car crash, and her funeral drew a global television audience of more than a billion people."
-  },
-  {
-    "year": 1999,
-    "movie": "The Matrix",
-    "song": "Smooth",
-    "artist": "Santana",
-    "fact": "The euro was launched as an accounting currency for 11 European countries, laying the groundwork for the later euro banknotes and coins. Napster popularized mass file-sharing of music, jolting the record industry just as fears of a Y2K computer glitch dominated New Year's Eve planning."
-  },
-  {
-    "year": 2001,
-    "movie": "The Lord of the Rings: The Fellowship of the Ring",
-    "song": "Fallin'",
-    "artist": "Alicia Keys",
-    "fact": "Al-Qaeda hijackers attacked the World Trade Center and the Pentagon on September 11, killing nearly 3,000 people and reshaping global security policy. Wikipedia went live that January, beginning as a small collaborative encyclopedia that would grow into one of the web's most-used references."
-  },
-  {
-    "year": 2004,
-    "movie": "Spider-Man 2",
-    "song": "Yeah!",
-    "artist": "Usher",
-    "fact": "Mark Zuckerberg launched Facebook from a Harvard dorm as a campus social network that later scaled worldwide. A massive undersea earthquake in the Indian Ocean triggered a tsunami that killed more than 200,000 people across Indonesia, Sri Lanka, India, Thailand, and other coasts."
-  },
-  {
-    "year": 2008,
-    "movie": "The Dark Knight",
-    "song": "Viva la Vida",
-    "artist": "Coldplay",
-    "fact": "Barack Obama won the U.S. presidency, becoming the first African American elected to the office. The collapse of Lehman Brothers in September accelerated a global financial crisis that pushed governments into emergency bank rescues and stimulus programs."
-  },
-  {
-    "year": 2012,
-    "movie": "The Avengers",
-    "song": "Somebody That I Used to Know",
-    "artist": "Gotye",
-    "fact": "CERN announced the discovery of a particle consistent with the Higgs boson, filling in a long-sought piece of the Standard Model of physics. NASA's Curiosity rover landed in Gale Crater on Mars, beginning a multi-year search for signs that the planet could once have supported life."
-  },
-  {
-    "year": 2015,
-    "movie": "Star Wars: The Force Awakens",
-    "song": "Uptown Funk",
-    "artist": "Mark Ronson",
-    "fact": "NASA's New Horizons spacecraft flew past Pluto, sending back the first close-up images of the dwarf planet's icy mountains and heart-shaped plain. Nearly 200 countries adopted the Paris Agreement, a global pact to limit greenhouse-gas emissions and slow climate change."
-  }
-]
+    {
+      "year": 1969,
+      "movie": "Easy Rider",
+      "song": "Come Together",
+      "artist": "The Beatles",
+      "fact": "Apollo 11 landed the first humans on the Moon, fulfilling a decade-long space race goal. The Woodstock festival in upstate New York became a defining symbol of counterculture and peace.",
+      "emoji": "🌕"
+      },
+    {
+      "year": 1971,
+      "movie": "A Clockwork Orange",
+      "song": "Imagine",
+      "artist": "John Lennon",
+      "fact": "Intel released the 4004, the world's first commercially available microprocessor, laying groundwork for modern computing. Greenpeace was founded in Vancouver, launching a new era of environmental activism.",
+      "emoji": "✌️"
+      },
+    {
+      "year": 1975,
+      "movie": "Jaws",
+      "song": "Bohemian Rhapsody",
+      "artist": "Queen",
+      "fact": "Microsoft was founded by Bill Gates and Paul Allen, setting the stage for the personal computer revolution. The Vietnam War officially ended with the fall of Saigon in April.",
+      "emoji": "🦈"
+      },
+    {
+      "year": 1977,
+      "movie": "Star Wars",
+      "song": "Hotel California",
+      "artist": "Eagles",
+      "fact": "Apple Computer was officially incorporated, formalizing the company that would reshape personal technology. Star Wars redefined blockbuster filmmaking and merchandising for generations to come.",
+      "emoji": "✨"
+      },
+    {
+      "year": 1980,
+      "movie": "The Empire Strikes Back",
+      "song": "Another Brick in the Wall (Part II)",
+      "artist": "Pink Floyd",
+      "fact": "CNN launched as the first 24-hour cable news network, transforming how the world consumed news. John Lennon was assassinated in New York City, shocking fans worldwide.",
+      "emoji": "🌌"
+      },
+    {
+      "year": 1984,
+      "movie": "Ghostbusters",
+      "song": "When Doves Cry",
+      "artist": "Prince",
+      "fact": "Apple introduced the Macintosh, popularizing the graphical user interface for everyday consumers. AT&T's breakup took effect, reshaping the American telecommunications industry.",
+      "emoji": "💻"
+      },
+    {
+      "year": 1985,
+      "movie": "Back to the Future",
+      "song": "We Are the World",
+      "artist": "USA for Africa",
+      "fact": "The Live Aid benefit concerts raised massive global awareness and funds for famine relief in Ethiopia. Nintendo released the NES in North America, reviving the home video game industry.",
+      "emoji": "⏰"
+      },
+    {
+      "year": 1989,
+      "movie": "Batman",
+      "song": "Like a Prayer",
+      "artist": "Madonna",
+      "fact": "The Berlin Wall fell, symbolizing the collapse of Communist rule across Eastern Europe. Tim Berners-Lee proposed the concept that would become the World Wide Web.",
+      "emoji": "🧱"
+      },
+    {
+      "year": 1991,
+      "movie": "Terminator 2: Judgment Day",
+      "song": "Smells Like Teen Spirit",
+      "artist": "Nirvana",
+      "fact": "The Soviet Union officially dissolved, ending the Cold War era. The World Wide Web became publicly available, opening the internet to broader use.",
+      "emoji": "🤘"
+      },
+    {
+      "year": 1994,
+      "movie": "Pulp Fiction",
+      "song": "The Sign",
+      "artist": "Ace of Base",
+      "fact": "Nelson Mandela was inaugurated as South Africa's first Black president, marking the end of apartheid. Jeff Bezos founded Amazon, initially as an online bookstore.",
+      "emoji": "🎬"
+      },
+    {
+      "year": 1997,
+      "movie": "Titanic",
+      "song": "Candle in the Wind 1997",
+      "artist": "Elton John",
+      "fact": "Princess Diana died in a car crash in Paris, prompting an outpouring of global mourning. J.K. Rowling published the first Harry Potter novel, beginning a publishing phenomenon.",
+      "emoji": "🚢"
+      },
+    {
+      "year": 1999,
+      "movie": "The Matrix",
+      "song": "Livin' la Vida Loca",
+      "artist": "Ricky Martin",
+      "fact": "Napster launched, disrupting the music industry through peer-to-peer file sharing. Worldwide anxiety peaked over the Y2K bug as computers approached the new millennium.",
+      "emoji": "💊"
+      },
+    {
+      "year": 2001,
+      "movie": "The Lord of the Rings: The Fellowship of the Ring",
+      "song": "Fallin'",
+      "artist": "Alicia Keys",
+      "fact": "The September 11 terrorist attacks on the World Trade Center and Pentagon reshaped global politics and security. Wikipedia launched, eventually becoming the world's largest collaborative encyclopedia.",
+      "emoji": "🕊️"
+      },
+    {
+      "year": 2008,
+      "movie": "The Dark Knight",
+      "song": "Single Ladies (Put a Ring on It)",
+      "artist": "Beyoncé",
+      "fact": "A global financial crisis triggered by the U.S. housing market collapse led to widespread recessions. Barack Obama was elected as the first Black president of the United States.",
+      "emoji": "📉"
+      },
+    {
+      "year": 2015,
+      "movie": "Mad Max: Fury Road",
+      "song": "Uptown Funk",
+      "artist": "Mark Ronson ft. Bruno Mars",
+      "fact": "The U.S. Supreme Court legalized same-sex marriage nationwide in Obergefell v. Hodges. Nearly 200 nations adopted the Paris Agreement, committing to global action on climate change.",
+      "emoji": "🌈"
+      }
+  ]
