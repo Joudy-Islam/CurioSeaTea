@@ -706,6 +706,30 @@ const moreMeals = [
       "Bake for 15 minutes."
     ]
   },
+  {
+  name: "Ratatouille", emoji: "🍆", type: "Meal",
+  ingredients: [
+    "1 aubergine (eggplant)",
+    "2 courgettes (zucchini)",
+    "1 red pepper",
+    "1 yellow pepper",
+    "1 onion",
+    "3 garlic cloves",
+    "1 can chopped tomatoes",
+    "3 tbsp olive oil",
+    "Fresh thyme",
+    "Basil",
+    "Salt and pepper"
+  ],
+  steps: [
+    "Chop the aubergine, courgettes and peppers into 2cm chunks.",
+    "Heat the olive oil in a large pot and fry the chopped onion for 5 minutes until soft. Add the garlic and cook 1 minute.",
+    "Add the aubergine and fry for 5 minutes, then add the courgettes and peppers and cook another 5 minutes.",
+    "Pour in the tomatoes, add the thyme, salt and pepper, and stir.",
+    "Cover and simmer on low heat for 30-40 minutes, stirring now and then, until everything is soft.",
+    "Tear in the basil and serve warm with crusty bread, rice, or as a side dish."
+  ]
+},
 ];
  
 const moreSnacks = [
@@ -912,30 +936,6 @@ const moreDesserts = [
       "Scoop and serve."
     ]
   },
-  {
-  name: "Ratatouille", emoji: "🍆", type: "Meal",
-  ingredients: [
-    "1 aubergine (eggplant)",
-    "2 courgettes (zucchini)",
-    "1 red pepper",
-    "1 yellow pepper",
-    "1 onion",
-    "3 garlic cloves",
-    "1 can chopped tomatoes",
-    "3 tbsp olive oil",
-    "Fresh thyme",
-    "Basil",
-    "Salt and pepper"
-  ],
-  steps: [
-    "Chop the aubergine, courgettes and peppers into 2cm chunks.",
-    "Heat the olive oil in a large pot and fry the chopped onion for 5 minutes until soft. Add the garlic and cook 1 minute.",
-    "Add the aubergine and fry for 5 minutes, then add the courgettes and peppers and cook another 5 minutes.",
-    "Pour in the tomatoes, add the thyme, salt and pepper, and stir.",
-    "Cover and simmer on low heat for 30-40 minutes, stirring now and then, until everything is soft.",
-    "Tear in the basil and serve warm with crusty bread, rice, or as a side dish."
-  ]
-},
 ];
  
 const foods = [
@@ -958,7 +958,29 @@ return food;
 }
 btnJS.addEventListener("click", function() {
     const food = pickFood();
+    currentFood = food;
 dishJS.textContent = food.emoji + " " + food.name;
 recipeBtn.disabled = false;
 });
+recipeBtn.addEventListener("click", function() {
+  const recipe = document.getElementById("recipe");
 
+   if (!recipe || !currentFood) return;
+
+    recipe.innerHTML = `
+    <button id="close">X</button>
+        <h2>${currentFood.emoji} ${currentFood.name}</h2>
+        <h3>Ingredients:</h3>
+        <ul>
+            ${currentFood.ingredients.map(item => `<li>${item}</li>`).join("")}
+        </ul>
+        <h3>Steps:</h3>
+        <ol>
+            ${currentFood.steps.map(step => `<li>${step}</li>`).join("")}
+        </ol>
+         `;
+    recipe.style.display = "block";
+    document.getElementById("close").addEventListener("click", function() {
+    recipe.style.display = "none";
+});
+   });
