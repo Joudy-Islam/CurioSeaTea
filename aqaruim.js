@@ -3,8 +3,7 @@
 console.log("AQUARIUM JS IS RUNNING");
 const FEEDS_TO_EXPLODE = 4;
 const SPRINKLES_FOR_FRENZY = 5;
-const pageUrl = (page) => `/${page}`.html;
-
+const pageUrl = (page) => `/${page}.html`;
 const interestNames = {
   design: "Design & Art",
   movies: "Movies & Drama",
