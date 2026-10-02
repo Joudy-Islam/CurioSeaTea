@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Massive Color Palettes Collection</title>
+  
+    <script src="https://cdn.tailwindcss.com"></script>
+   
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-[#F9FAFB] text-gray-800 p-6 min-h-screen">
+
+   
+    <div class="text-center max-w-2xl mx-auto mb-12 mt-6">
+        <h1 class="text-3xl font-bold mb-2 tracking-tight text-gray-900">Massive Color Palettes</h1>
+        <p class="text-gray-500 text-sm">A huge collection of gorgeous, soft, and modern color palettes. Click any color to copy its HEX code!</p>
+    </div>
+
+
+    <div id="toast" class="fixed bottom-5 right-5 bg-gray-900 text-white px-4 py-2 rounded-xl text-xs shadow-lg transform translate-y-20 opacity-0 transition-all duration-300 z-50">
+        Copied to clipboard! 
+    </div>
+
+    
+    <div id="palettes-grid" class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+    </div>
+
+
+    <script>
+        const palettesData = [
+            { name: "Soft Spring", colors: ["#E2ECE9", "#DFCCF1", "#FFEDA3", "#FFDAC1"] },
+            { name: "Pastel Dream", colors: ["#FFB7B2", "#B5E2FA", "#C7E9B0", "#FBF8CC"] },
+            { name: "Minimal Calm", colors: ["#EAE4E9", "#F0EBE2", "#DFE7FD", "#E2F0CB"] },
+            { name: "Earth Warmth", colors: ["#CCD5AE", "#E9EDC9", "#FEFAE0", "#FAEDCD"] },
+            { name: "Rose Whisper", colors: ["#FAD2E1", "#E2ECE9", "#FFF1E6", "#DFE7FD"] },
+            { name: "Sunset Breeze", colors: ["#FF9B85", "#E8C547", "#4F6D7A", "#C5DCA0"] },
+            { name: "Lavender Mist", colors: ["#D8E2DC", "#FFE5D9", "#FFCAD4", "#F4ACB7"] },
+            { name: "Ocean Breeze", colors: ["#B7E4C7", "#95D5B2", "#52B788", "#74C69D"] },
+            { name: "Warm Mocha", colors: ["#D4A373", "#FAEDCD", "#FEFAE0", "#CCD5AE"] },
+            { name: "Cosmic Latte", colors: ["#FFF3B0", "#335C67", "#E09F3E", "#9E2A2B"] },
+            { name: "Minty Fresh", colors: ["#99E1D9", "#70C1B3", "#247BA0", "#FFE066"] },
+            { name: "Berry Smooth", colors: ["#6D597A", "#B56576", "#E56B6F", "#EAAC8B"] },
+            { name: "Nordic Frost", colors: ["#E0FBFC", "#C2DFE3", "#9DB4CC", "#4A6FA5"] },
+            { name: "Cherry Blossom", colors: ["#FFB5A7", "#FCD5CE", "#F8EDEB", "#F9DCC4"] },
+            { name: "Autumn Glow", colors: ["#D87093", "#FFB6C1", "#FFE4E1", "#FFF0F5"] },
+            { name: "Neon Softness", colors: ["#E7C6FF", "#B8B8FF", "#BBD0FF", "#C8B6FF"] },
+            { name: "Desert Sand", colors: ["#F4EBB7", "#EAC435", "#345995", "#03CEA4"] },
+            { name: "Vintage Paper", colors: ["#F3E9D2", "#DBCDF0", "#CEF2EE", "#B7ADCF"] },
+            { name: "Teal Serenity", colors: ["#2EC4B6", "#CBF3F0", "#FFBF69", "#EFF8E2"] },
+            { name: "Moody Violet", colors: ["#3C096C", "#560BAD", "#7209B7", "#B5179E"] }
+        ];
+
+        const gridContainer = document.getElementById('palettes-grid');
+
+        palettesData.forEach(palette => {
+            // Create Card
+            const card = document.createElement('div');
+            card.className = "bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex flex-col gap-3 hover:shadow-md transition duration-300";
+
+            // Colors Container
+            const colorsDiv = document.createElement('div');
+            colorsDiv.className = "flex flex-col h-44 rounded-xl overflow-hidden shadow-inner";
+
+            palette.colors.forEach(hex => {
+                const btn = document.createElement('button');
+                btn.className = `h-1/4 w-full relative group flex items-center justify-center transition hover:opacity-90 cursor-pointer`;
+                btn.style.backgroundColor = hex;
+                btn.onclick = () => copyColor(hex);
+
+                const span = document.createElement('span');
+                span.className = "opacity-0 group-hover:opacity-100 text-[10px] font-mono bg-black/50 text-white px-2 py-0.5 rounded transition";
+                span.innerText = hex;
+
+                btn.appendChild(span);
+                colorsDiv.appendChild(btn);
+            });
+
+            // Footer Name
+            const footer = document.createElement('div');
+            footer.className = "flex justify-between items-center px-1";
+            footer.innerHTML = `
+                <span class="text-xs font-bold text-gray-600">${palette.name}</span>
+                <span class="text-[10px] text-gray-400 font-mono">4 Colors</span>
+            `;
+
+            card.appendChild(colorsDiv);
+            card.appendChild(footer);
+            gridContainer.appendChild(card);
+        });
+
+        function copyColor(hex) {
+            navigator.clipboard.writeText(hex).then(() => {
+                const toast = document.getElementById('toast');
+                toast.innerText = `Copied: ${hex} `;
+                toast.classList.remove('translate-y-20', 'opacity-0');
+                
+                setTimeout(() => {
+                    toast.classList.add('translate-y-20', 'opacity-0');
+                }, 2000);
+            });
+        }
+    </script>
+
+</body>
+</html>
