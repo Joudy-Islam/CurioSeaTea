@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CurioSeaTea</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+<body class="bg-pink-200 text-slate-800 min-h-screen flex flex-col items-center justify-between p-6 select-none border-4 border-pink-900/80 shadow-lg rounded-xl">
+
+    <!-- Header -->
+    <header class="text-center pt-4">
+        <h1 class="text-5xl font-extrabold tracking-tight text-pink-900">Activity Spinner 🎡</h1>
+        <p class="text-pink-900/80 text-lg mt-1 pt-3 font-medium">Bored and have nothing to do?</p>
+        <h3 class="text-pink-900/80 text-lg font-medium">Let us help you find something to do!</h3>
+    </header>
+
+    <!-- Main Content -->
+    <main class="w-full max-w-md flex flex-col items-center gap-6 my-auto">
+        
+        <!--  Selector -->
+        <div class="w-full space-y-4" id="interest-selector">
+            <h2 class="text-3xl font-extrabold text-center text-pink-900 pb-6 tracking-tight">| Choose an Interest |</h2>
+            <div class="grid grid-cols-2 gap-4">
+            <button onclick="openCategory('arts')" class="p-5 bg-pink-300 hover:bg-pink-400 border-2 border-pink-900/80 rounded-2xl transition font-medium text-center shadow-md active:scale-95 group cursor-pointer">
+                <span class="text-2xl block mb-1 group-hover:scale-110 transition-transform text-pink-900 font-bold">Arts 🎨</span>
+              </button>
+              <button onclick="openCategory('sports')" class="p-5 bg-pink-300 hover:bg-pink-400 border-2 border-pink-900/80 rounded-2xl transition font-medium text-center shadow-md active:scale-95 group cursor-pointer">
+                <span class="text-2xl block mb-1 group-hover:scale-110 transition-transform text-pink-900 font-bold">Sports 🏀</span>
+              </button>
+              <button onclick="openCategory('reading')" class="p-5 bg-pink-300 hover:bg-pink-400 border-2 border-pink-900/80 rounded-2xl transition font-medium text-center shadow-md active:scale-95 group cursor-pointer">
+                <span class="text-2xl block mb-1 group-hover:scale-110 transition-transform text-pink-900 font-bold">Reading 📚</span>
+              </button>
+              <button onclick="openCategory('gaming')" class="p-5 bg-pink-300 hover:bg-pink-400 border-2 border-pink-900/80 rounded-2xl transition font-medium text-center shadow-md active:scale-95 group cursor-pointer">
+                <span class="text-2xl block mb-1 group-hover:scale-110 transition-transform text-pink-900 font-bold">Gaming 🎮</span>
+              </button>
+            </div>
+        </div>
+
+        <!--The Activity Result Page-->
+        <div id="activity-view" class="w-full bg-pink-100/80 border-2 border-pink-900/80 p-8 rounded-3xl text-center hidden space-y-6 shadow-xl">
+            <div class="flex justify-between items-center">
+                <button onclick="goBack()" class="text-sm font-bold text-pink-900 hover:underline cursor-pointer">← Back</button>
+                <h2 id="category-title" class="text-2xl font-extrabold text-pink-900 capitalize"></h2>
+                <div class="w-8"></div>
+            </div>
+
+
+            <div class="py-6 bg-pink-200 border-2 border-dashed border-pink-950/40 rounded-2xl shadow-inner">
+                <span id="activity-display" class="text-xl font-bold text-pink-950 px-4 block">Click spin to find out!</span>
+            </div>
+
+
+            <div class="space-y-3">
+                <button onclick="spinActivity()" id="spin-btn" class="w-full py-3.5 bg-pink-600 hover:bg-pink-700 text-white font-extrabold rounded-xl shadow-lg transition active:scale-95 cursor-pointer">
+                    Spin for Activity! 🎲
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="text-xs text-pink-900 text-center pt-4 font-semibold">
+        CurioSeaTea • Built with speed & love ☕💕
+    </footer>
+
+    <script>
+        const activitiesData = {
+            arts: ["Sketch a random object located nearby on your desk or room", "Fold an intricate origami paper crane following a step-by-step tutorial", "Spend ten minutes on a quick digital doodle session using a mouse or stylus", "Draw a comic strip featuring a fictional character going through an ordinary daily struggle", "Practice continuous line drawing without lifting your pen or pencil from the paper surface", "Design a custom minimalist logo or badge for a fictional coffee shop or indie band"],
+            sports: ["Complete a set of 20 high-energy jumping jacks to get your heart rate up", "Follow along with a quick 10-minute living room stretching and mobility routine", "Hold a challenging wall sit against a flat surface for 45 seconds straight", "Test your core stability and balance by standing on one single leg for 30 seconds", "Put on an upbeat track and dance full out for the duration of a single cardio song", "Practice high knees running in place for 30 seconds", "Do a plank hold for 30 seconds while keeping your body in a straight line"],
+            reading: ["Dive into a short sci-fi story online with an unexpected twist ending","Open a random Wikipedia article and read through its history to learn a completely new trivia fact", "Browse a single page of an online webcomic or graphic novel", "Challenge yourself to write a creative 3-sentence micro-story with a complete narrative arc", "Flip through a cookbook or recipe blog to read the storytelling and descriptions behind the dishes", "Read a random poem from an online poetry collection and reflect on its imagery and themes","Explore a piece of long-form journalism detailing an extraordinary historical event or discovery"],
+            gaming: ["Try out a new, experimental indie web game hosted on a browser platform", "Attempt to speedrun a difficult level or map that you usually struggle to complete", "Change your game layout/settings", "Play a quick puzzle game round ", "Design a custom character", "Replay your favorite mission or level using a restrictive self-imposed challenge rule", "Watch a short lore video or developer commentary breaking down the background of your favorite game", "Collaborate or strategize with a friend on a multiplayer title or cooperative puzzle map"]
+        };
+          let activeCategory = '';
+
+        function openCategory(category) {
+            activeCategory = category;
+            
+            // Hide selector, show activity view
+            document.getElementById('interest-selector').classList.add('hidden');
+            document.getElementById('activity-view').classList.remove('hidden');
+            
+            // Set title and initial text
+            document.getElementById('category-title').innerText = `${category} 🌟`;
+            document.getElementById('activity-display').innerText = "Ready to pick an activity!";
+        }
+
+        function goBack() {
+            document.getElementById('activity-view').classList.add('hidden');
+            document.getElementById('interest-selector').classList.remove('hidden');
+        }
+
+        function spinActivity() {
+            const display = document.getElementById('activity-display');
+            const btn = document.getElementById('spin-btn');
+            
+            btn.disabled = true;
+            display.innerText = "Spinning the wheel... 🎡";
+            
+            // Simulate a brief suspenseful roll effect
+            setTimeout(() => {
+                const options = activitiesData[activeCategory];
+                const randomIndex = Math.floor(Math.random() * options.length);
+                display.innerText = options[randomIndex];
+                btn.disabled = false;
+            }, 600);
+        }
+    </script>
+</body>
+</html>
