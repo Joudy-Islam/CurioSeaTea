@@ -1,13 +1,12 @@
 import History from './pages/History/History';
 
 function App() {
-  const path = window.location.pathname;
-
-  if (path === "/history") {
-    return <History />;
-  }
-
-  return <History />;
+  return(
+    <div className="App">
+    <History/>
+    </div>
+  );
 }
 
 export default App;
+main
