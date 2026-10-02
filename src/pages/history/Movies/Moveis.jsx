@@ -1,6 +1,11 @@
 import { useState } from "react";
 import "./Movies.css";
 
+
+
+
+
+
 export default function Movies() {
   const [page, setPage] = useState(1);
   const [mood, setMood] = useState("");

@@ -3,7 +3,10 @@
 console.log("AQUARIUM JS IS RUNNING");
 const FEEDS_TO_EXPLODE = 4;
 const SPRINKLES_FOR_FRENZY = 5;
-const pageUrl = (page) => `/${page}`.html;
+const pageUrl = (page) => `/${page}.html`;
+
+
+
 
 const interestNames = {
   design: "Design & Art",
@@ -209,8 +212,9 @@ if (aquarium && water && feedBtn && text) {
     document.body.classList.add("leaving");
 
     await wait(500);
-
     window.location.href = pageUrl(fish.dataset.page);
+
+
   }
   if (helpBtn && helpPanel) {
     const setHelp = (open) => helpPanel.classList.toggle("open", open);
