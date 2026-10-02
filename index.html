@@ -22,16 +22,16 @@
         <div class="w-full space-y-4" id="interest-selector">
             <h2 class="text-3xl font-extrabold text-center text-pink-900 pb-6 tracking-tight">| Choose an Interest |</h2>
             <div class="grid grid-cols-2 gap-4">
-              <button  class="p-5 bg-pink-300 hover:bg-pink-400 border-2 border-pink-900/80 rounded-2xl transition font-medium text-center shadow-md active:scale-95 group cursor-pointer">
+            <button onclick="openCategory('arts')" class="p-5 bg-pink-300 hover:bg-pink-400 border-2 border-pink-900/80 rounded-2xl transition font-medium text-center shadow-md active:scale-95 group cursor-pointer">
                 <span class="text-2xl block mb-1 group-hover:scale-110 transition-transform text-pink-900 font-bold">Arts 🎨</span>
               </button>
-              <button class="p-5 bg-pink-300 hover:bg-pink-400 border-2 border-pink-900/80 rounded-2xl transition font-medium text-center shadow-md active:scale-95 group cursor-pointer">
+              <button onclick="openCategory('sports')" class="p-5 bg-pink-300 hover:bg-pink-400 border-2 border-pink-900/80 rounded-2xl transition font-medium text-center shadow-md active:scale-95 group cursor-pointer">
                 <span class="text-2xl block mb-1 group-hover:scale-110 transition-transform text-pink-900 font-bold">Sports 🏀</span>
               </button>
-              <button  class="p-5 bg-pink-300 hover:bg-pink-400 border-2 border-pink-900/80 rounded-2xl transition font-medium text-center shadow-md active:scale-95 group cursor-pointer">
+              <button onclick="openCategory('reading')" class="p-5 bg-pink-300 hover:bg-pink-400 border-2 border-pink-900/80 rounded-2xl transition font-medium text-center shadow-md active:scale-95 group cursor-pointer">
                 <span class="text-2xl block mb-1 group-hover:scale-110 transition-transform text-pink-900 font-bold">Reading 📚</span>
               </button>
-              <button class="p-5 bg-pink-300 hover:bg-pink-400 border-2 border-pink-900/80 rounded-2xl transition font-medium text-center shadow-md active:scale-95 group cursor-pointer">
+              <button onclick="openCategory('gaming')" class="p-5 bg-pink-300 hover:bg-pink-400 border-2 border-pink-900/80 rounded-2xl transition font-medium text-center shadow-md active:scale-95 group cursor-pointer">
                 <span class="text-2xl block mb-1 group-hover:scale-110 transition-transform text-pink-900 font-bold">Gaming 🎮</span>
               </button>
             </div>
@@ -71,7 +71,40 @@
             reading: ["Dive into a short sci-fi story online with an unexpected twist ending","Open a random Wikipedia article and read through its history to learn a completely new trivia fact", "Browse a single page of an online webcomic or graphic novel", "Challenge yourself to write a creative 3-sentence micro-story with a complete narrative arc", "Flip through a cookbook or recipe blog to read the storytelling and descriptions behind the dishes", "Read a random poem from an online poetry collection and reflect on its imagery and themes","Explore a piece of long-form journalism detailing an extraordinary historical event or discovery"],
             gaming: ["Try out a new, experimental indie web game hosted on a browser platform", "Attempt to speedrun a difficult level or map that you usually struggle to complete", "Change your game layout/settings", "Play a quick puzzle game round ", "Design a custom character", "Replay your favorite mission or level using a restrictive self-imposed challenge rule", "Watch a short lore video or developer commentary breaking down the background of your favorite game", "Collaborate or strategize with a friend on a multiplayer title or cooperative puzzle map"]
         };
+          let activeCategory = '';
 
+        function openCategory(category) {
+            activeCategory = category;
+            
+            // Hide selector, show activity view
+            document.getElementById('interest-selector').classList.add('hidden');
+            document.getElementById('activity-view').classList.remove('hidden');
+            
+            // Set title and initial text
+            document.getElementById('category-title').innerText = `${category} 🌟`;
+            document.getElementById('activity-display').innerText = "Ready to pick an activity!";
+        }
+
+        function goBack() {
+            document.getElementById('activity-view').classList.add('hidden');
+            document.getElementById('interest-selector').classList.remove('hidden');
+        }
+
+        function spinActivity() {
+            const display = document.getElementById('activity-display');
+            const btn = document.getElementById('spin-btn');
+            
+            btn.disabled = true;
+            display.innerText = "Spinning the wheel... 🎡";
+            
+            // Simulate a brief suspenseful roll effect
+            setTimeout(() => {
+                const options = activitiesData[activeCategory];
+                const randomIndex = Math.floor(Math.random() * options.length);
+                display.innerText = options[randomIndex];
+                btn.disabled = false;
+            }, 600);
+        }
     </script>
 </body>
 </html>
