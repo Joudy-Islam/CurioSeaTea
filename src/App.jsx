@@ -1,6 +1,13 @@
+ History-Page
+import History from './pages/History/History';
 
-import Movies from "./pages/history/Movies/moveis.jsx"
-
-export default function App() {
-  return <Movies />;
+function App() {
+  return (
+    <div className="App">
+      <History />
+    </div>
+  );
 }
+
+export default App;
+main
