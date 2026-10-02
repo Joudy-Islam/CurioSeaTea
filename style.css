@@ -186,7 +186,7 @@ button.fish:focus-visible { outline: 3px dashed #fff; outline-offset: 6px; borde
 .fish-blue   { top: 34%; left: 6%;  animation-name: swim-a; animation-duration: 24s; }
 .fish-orange { top: 22%; left: 40%; animation-name: swim-b; animation-duration: 20s; }
 .fish-purple { top: 52%; left: 32%; animation-name: swim-c; animation-duration: 26s; }
-.fish-yellow { top: 48%; left: 68%; animation-name: swim-b; animation-duration: 28s; animation-delay: -8s; }
+.fish-pink { top: 48%; left: 68%; animation-name: swim-b; animation-duration: 28s; animation-delay: -8s; }
 .fish-red    { top: 30%; left: 58%; animation-name: swim-a; animation-duration: 30s; animation-delay: -14s; }
 
 .decorative-fish { width: clamp(30px, 5vw, 60px); opacity: 0.75; pointer-events: none; }
@@ -283,7 +283,6 @@ button.fish:focus-visible { outline: 3px dashed #fff; outline-offset: 6px; borde
   background: rgba(30, 90, 190, 0.5); color: #fff; font-size: 1.3rem; cursor: pointer;
 }
 
-/* ---------- Responsive + accessibility ---------- */
 @media (max-width: 720px) {
   .aquarium { aspect-ratio: 4 / 5; }
   .feeding-area { width: 96%; flex-wrap: wrap; justify-content: center; border-radius: 34px; padding: 16px; }
