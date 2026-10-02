@@ -1,0 +1,395 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Patrick+Hand&display=swap");
+
+:root {
+  --room-1: #0b1d3d;
+  --room-2: #050b1c;
+  --glass: #5cc8ff;
+  --glow: #2fd0ff;
+  --water-top: #2aa9ee;
+  --water-mid: #0e5aa8;
+  --water-deep: #06224d;
+  --panel: rgba(10, 30, 70, 0.82);
+  --text: #e8f6ff;
+  --sand: #e9d9b4;
+  --radius-tank: clamp(28px, 6vw, 70px);
+  --font: "Fredoka", system-ui, sans-serif;
+  --hand: "Patrick Hand", cursive;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { min-height: 100%; }
+
+body {
+  font-family: var(--font);
+  color: var(--text);
+  background:
+    radial-gradient(ellipse at 20% 10%, rgba(60, 120, 200, 0.25), transparent 45%),
+    radial-gradient(ellipse at 90% 90%, rgba(255, 190, 90, 0.16), transparent 30%),
+    radial-gradient(ellipse at 50% 40%, var(--room-1), var(--room-2) 75%);
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+.aquarium-page {
+  position: relative;
+  width: min(1180px, 94vw);
+  margin: 0 auto;
+  padding: 16px 0 40px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px 14px;
+}
+.logo img { height: clamp(44px, 7vw, 84px); width: auto; display: block;
+  filter: drop-shadow(0 0 12px rgba(47, 208, 255, 0.6)); }
+
+.help-button {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  border: 2px solid rgba(120, 220, 255, 0.7);
+  background: radial-gradient(circle at 35% 30%, #4aa8ff, #1a4fb8);
+  color: #fff;
+  font: 600 1.7rem var(--font);
+  cursor: pointer;
+  box-shadow: 0 0 22px rgba(47, 208, 255, 0.55), inset 0 2px 6px rgba(255, 255, 255, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.help-button:hover { transform: scale(1.08) rotate(-6deg); box-shadow: 0 0 32px rgba(47, 208, 255, 0.85); }
+
+.aquarium {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-tank);
+  padding: 10px;
+  background: linear-gradient(160deg, rgba(120, 210, 255, 0.55), rgba(30, 90, 190, 0.35));
+  box-shadow:
+    0 0 0 2px rgba(150, 225, 255, 0.55),
+    0 0 40px rgba(47, 208, 255, 0.45),
+    0 30px 60px rgba(0, 0, 0, 0.55);
+}
+
+.water {
+  position: relative;
+  width: 100%; height: 100%;
+  overflow: hidden;
+  border-radius: calc(var(--radius-tank) - 10px);
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(140, 235, 255, 0.55), transparent 55%),
+    linear-gradient(180deg, var(--water-top) 0%, var(--water-mid) 45%, var(--water-deep) 100%);
+}
+
+.water-light {
+  position: absolute; inset: -10% -10% 0;
+  background: repeating-linear-gradient(
+    102deg,
+    transparent 0 7%,
+    rgba(200, 245, 255, 0.16) 9% 12%,
+    transparent 14% 22%);
+  mask-image: linear-gradient(180deg, #000, transparent 85%);
+  -webkit-mask-image: linear-gradient(180deg, #000, transparent 85%);
+  animation: rays 9s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+@keyframes rays { from { transform: translateX(-2%); opacity: 0.7; } to { transform: translateX(2%); opacity: 1; } }
+
+.glass {
+  position: absolute; inset: 0;
+  border-radius: var(--radius-tank);
+  pointer-events: none;
+  background:
+    linear-gradient(115deg, rgba(255, 255, 255, 0.22) 0%, transparent 18%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.28), transparent 6%);
+  box-shadow: inset 0 0 30px rgba(160, 230, 255, 0.45);
+}
+
+.bubbles span {
+  position: absolute; bottom: -20px;
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(220, 248, 255, 0.85);
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.05) 60%);
+  animation: rise 9s linear infinite;
+  opacity: 0;
+}
+.bubbles span:nth-child(1) { left: 8%;  animation-delay: 0s;   transform: scale(.7); }
+.bubbles span:nth-child(2) { left: 22%; animation-delay: 2s;   animation-duration: 11s; }
+.bubbles span:nth-child(3) { left: 35%; animation-delay: 4s;   transform: scale(.5); }
+.bubbles span:nth-child(4) { left: 48%; animation-delay: 1s;   animation-duration: 12s; }
+.bubbles span:nth-child(5) { left: 62%; animation-delay: 5s;   transform: scale(1.2); }
+.bubbles span:nth-child(6) { left: 74%; animation-delay: 3s;   animation-duration: 10s; }
+.bubbles span:nth-child(7) { left: 86%; animation-delay: 6s;   transform: scale(.6); }
+.bubbles span:nth-child(8) { left: 93%; animation-delay: 7.5s; }
+@keyframes rise {
+  0%   { translate: 0 0;      opacity: 0; }
+  10%  { opacity: 1; }
+  50%  { translate: 14px -250px; }
+  100% { translate: -10px -520px; opacity: 0; }
+}
+
+.sand {
+  position: absolute; left: 0; right: 0; bottom: 0; height: 14%;
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(255, 255, 255, 0.35), transparent 40%),
+    linear-gradient(180deg, #f3e6c4, var(--sand) 40%, #b9a677);
+  border-radius: 50% 50% 0 0 / 30% 30% 0 0;
+  box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.plants { position: absolute; inset: 0; pointer-events: none; }
+.plant {
+  position: absolute; bottom: 9%;
+  width: 46px; height: 42%;
+  transform-origin: 50% 100%;
+  animation: sway 5s ease-in-out infinite alternate;
+}
+.plant::before, .plant::after {
+  content: ""; position: absolute; bottom: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(0deg, #0f6b3a, #6fdc5a);
+  border-radius: 100% 0 100% 0 / 100% 0 100% 0;
+  transform-origin: 50% 100%;
+}
+.plant::before { left: 0;  transform: rotate(-14deg); }
+.plant::after  { left: 14px; height: 82%; transform: rotate(16deg); background: linear-gradient(0deg, #0b5a3a, #43c47a); }
+.plant-1 { left: 5%;  height: 55%; }
+.plant-2 { left: 26%; height: 40%; animation-delay: -1.5s; }
+.plant-3 { right: 20%; height: 48%; animation-delay: -3s; }
+.plant-4 { right: 4%;  height: 62%; animation-delay: -2s; }
+@keyframes sway { from { transform: rotate(-4deg); } to { transform: rotate(4deg); } }
+
+.fish {
+  position: absolute;
+  background: none; border: 0;
+  width: clamp(70px, 12vw, 150px);
+  cursor: pointer;
+  animation: swim-a 22s ease-in-out infinite;
+}
+.fish img { display: block; width: 100%; height: auto; pointer-events: none;
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 20, 0.35));
+  transition: transform 0.25s, filter 0.25s; }
+
+button.fish:hover img,
+button.fish:focus-visible img {
+  transform: scale(1.12);
+  filter: drop-shadow(0 0 16px rgba(255, 255, 255, 0.85));
+}
+button.fish:focus-visible { outline: 3px dashed #fff; outline-offset: 6px; border-radius: 20px; }
+
+.fish.selected img { filter: drop-shadow(0 0 20px var(--glow)); }
+.fish.eating img { animation: chomp 0.5s ease 2; }
+@keyframes chomp { 50% { transform: scale(1.25) rotate(-6deg); } }
+
+.fish-blue   { top: 34%; left: 6%;  animation-name: swim-a; animation-duration: 24s; }
+.fish-orange { top: 22%; left: 40%; animation-name: swim-b; animation-duration: 20s; }
+.fish-purple { top: 52%; left: 32%; animation-name: swim-c; animation-duration: 26s; }
+.fish-pink { top: 48%; left: 68%; animation-name: swim-b; animation-duration: 28s; animation-delay: -8s; }
+.fish-red    { top: 30%; left: 58%; animation-name: swim-a; animation-duration: 30s; animation-delay: -14s; }
+
+.decorative-fish { width: clamp(30px, 5vw, 60px); opacity: 0.75; pointer-events: none; }
+.fish-small-1 { top: 62%; left: 12%; animation-name: swim-c; animation-duration: 18s; }
+.fish-small-2 { top: 16%; left: 80%; animation-name: swim-a; animation-duration: 21s; }
+.fish-small-3 { top: 70%; left: 55%; animation-name: swim-b; animation-duration: 25s; }
+
+@keyframes swim-a {
+  0%   { transform: translate(0, 0)        scaleX(1); }
+  45%  { transform: translate(18vw, -30px) scaleX(1); }
+  50%  { transform: translate(18vw, -30px) scaleX(-1); }
+  95%  { transform: translate(0, 20px)     scaleX(-1); }
+  100% { transform: translate(0, 0)        scaleX(1); }
+}
+@keyframes swim-b {
+  0%   { transform: translate(0, 0)         scaleX(-1); }
+  45%  { transform: translate(-16vw, 24px)  scaleX(-1); }
+  50%  { transform: translate(-16vw, 24px)  scaleX(1); }
+  95%  { transform: translate(0, -16px)     scaleX(1); }
+  100% { transform: translate(0, 0)         scaleX(-1); }
+}
+@keyframes swim-c {
+  0%, 100% { transform: translate(0, 0) scaleX(1); }
+  25% { transform: translate(6vw, -40px) scaleX(1); }
+  50% { transform: translate(12vw, 10px) scaleX(1); }
+  52% { transform: translate(12vw, 10px) scaleX(-1); }
+  75% { transform: translate(5vw, -30px) scaleX(-1); }
+  98% { transform: translate(0, 0) scaleX(-1); }
+}
+
+.pellet {
+  position: absolute; width: 8px; height: 8px; border-radius: 50%;
+  background: #e0a94e; box-shadow: 0 0 6px rgba(255, 210, 120, 0.8);
+  animation: sink 2.2s ease-in forwards;
+}
+@keyframes sink { to { transform: translateY(45vh); opacity: 0.2; } }
+
+.feeding-area {
+  position: relative;
+  z-index: 2;
+  width: 88%;
+  margin: -34px auto 0;
+  display: flex; align-items: center; justify-content: space-between; gap: 18px;
+  padding: 18px 32px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(20, 60, 130, 0.9), rgba(8, 24, 64, 0.95));
+  border: 2px solid rgba(100, 200, 255, 0.45);
+  box-shadow: 0 0 26px rgba(47, 208, 255, 0.3), 0 16px 30px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+.instruction { flex: 1; font-family: var(--hand); font-size: clamp(1rem, 2vw, 1.4rem); line-height: 1.2; }
+
+.food-button {
+  flex: 0 0 auto;
+  display: inline-flex; align-items: center; gap: 12px;
+  padding: 16px 64px;
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  border-radius: 999px;
+  font: 600 1.6rem var(--font);
+  letter-spacing: 0.06em;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(180deg, #5ee6ff 0%, #17a6f0 60%, #0b7fd0 100%);
+  box-shadow: 0 0 30px rgba(47, 208, 255, 0.8), inset 0 4px 8px rgba(255, 255, 255, 0.5), inset 0 -6px 10px rgba(0, 60, 140, 0.4);
+  text-shadow: 0 2px 4px rgba(0, 60, 140, 0.5);
+  transition: transform 0.15s, box-shadow 0.2s;
+}
+.food-button:hover { transform: translateY(-2px) scale(1.03); box-shadow: 0 0 44px rgba(47, 208, 255, 1), inset 0 4px 8px rgba(255, 255, 255, 0.5); }
+.food-button:active { transform: translateY(2px) scale(0.98); }
+.food-icon { font-size: 1.1rem; letter-spacing: -0.15em; }
+.feeding-area::after { 
+  content: ""; flex: 1; height: 44px;
+  background: url("Photos/food-jar.png") right center / contain no-repeat;
+}
+
+.help-panel {
+  position: fixed; top: 22vh; right: 16px; z-index: 20;
+  width: min(260px, 82vw);
+  padding: 44px 24px 26px;
+  border-radius: 28px;
+  background: var(--panel);
+  border: 2px solid rgba(100, 200, 255, 0.5);
+  box-shadow: 0 0 30px rgba(47, 208, 255, 0.3), 0 20px 40px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  transform: translateX(130%);
+  transition: transform 0.45s cubic-bezier(0.2, 0.9, 0.3, 1.2);
+}
+.help-panel.open { transform: translateX(0); }
+.help-panel h2 { font-size: 1.05rem; letter-spacing: 0.08em; text-align: center; margin-bottom: 16px; }
+.help-panel p { font-family: var(--hand); font-size: 1.15rem; line-height: 1.3; margin-bottom: 14px; }
+.close-help {
+  position: absolute; top: 10px; right: 12px;
+  width: 34px; height: 34px; border-radius: 50%;
+  border: 1.5px solid rgba(150, 225, 255, 0.6);
+  background: rgba(30, 90, 190, 0.5); color: #fff; font-size: 1.3rem; cursor: pointer;
+}
+
+@media (max-width: 720px) {
+  .aquarium { aspect-ratio: 4 / 5; }
+  .feeding-area { width: 96%; flex-wrap: wrap; justify-content: center; border-radius: 34px; padding: 16px; }
+  .feeding-area::after { display: none; }
+  .instruction { text-align: center; flex-basis: 100%; }
+  .food-button { padding: 14px 48px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
+}
+
+
+
+.fish-blue   { --fish-color: #4db8ff; }
+.fish-orange { --fish-color: #ff9a3c; }
+.fish-purple { --fish-color: #b57cff; }
+.fish-yellow { --fish-color: #ffd84d; }
+.fish-red    { --fish-color: #ff5a5f; }
+
+button.fish { --grow: 1; }
+button.fish img { transform: scale(var(--grow)); }
+button.fish:hover img,
+button.fish:focus-visible img { transform: scale(calc(var(--grow) * 1.1)); }
+
+button.fish.selected::before {
+  content: ""; position: absolute; inset: -10px;
+  border: 2px dashed var(--glow); border-radius: 50%;
+  animation: ring 1.4s ease-in-out infinite alternate;
+}
+@keyframes ring { from { opacity: 0.4; transform: scale(0.95); } to { opacity: 1; transform: scale(1.05); } }
+
+.fish.wobble img { animation: wobble 0.35s ease-in-out infinite; }
+@keyframes wobble {
+  0%, 100% { transform: scale(var(--grow)) rotate(-4deg); }
+  50%      { transform: scale(calc(var(--grow) * 1.05)) rotate(4deg); }
+}
+
+.fish.eating img { animation: chomp 0.5s ease 2; }
+@keyframes chomp {
+  50% { transform: scale(calc(var(--grow) * 1.25)) rotate(-6deg); }
+}
+
+@keyframes sink {
+  to { transform: translateY(var(--fall, 40vh)); opacity: 0.15; }
+}
+
+.fish.exploding { animation-play-state: paused; z-index: 4; }
+.fish.exploding img {
+  animation: pre-burst 0.95s ease-in forwards;
+  filter: brightness(1.5) saturate(1.5) drop-shadow(0 0 24px #fff);
+}
+@keyframes pre-burst {
+  0%   { transform: scale(var(--grow)); }
+  25%  { transform: scale(calc(var(--grow) * 1.2)) rotate(-8deg); }
+  50%  { transform: scale(calc(var(--grow) * 1.4)) rotate(8deg); }
+  75%  { transform: scale(calc(var(--grow) * 1.6)) rotate(-10deg); }
+  100% { transform: scale(calc(var(--grow) * 1.9)); }
+}
+.fish.popped { visibility: hidden; }
+
+.burst {
+  position: absolute; width: 12px; height: 12px; border-radius: 50%;
+  translate: -50% -50%;
+  background: var(--c); box-shadow: 0 0 10px var(--c);
+  animation: burst 0.9s cubic-bezier(0.1, 0.7, 0.3, 1) forwards;
+  pointer-events: none; z-index: 5;
+}
+@keyframes burst { to { transform: translate(var(--dx), var(--dy)) scale(0.2); opacity: 0; } }
+
+.shockwave {
+  position: absolute; width: 20px; height: 20px; border-radius: 50%;
+  translate: -50% -50%; border: 4px solid #fff;
+  animation: shock 0.8s ease-out forwards; pointer-events: none; z-index: 5;
+}
+@keyframes shock { to { transform: scale(18); opacity: 0; border-width: 1px; } }
+
+.aquarium.flash { animation: tank-shake 0.4s; }
+.aquarium.flash::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit;
+  background: #fff; opacity: 0; pointer-events: none; z-index: 6;
+  animation: flash 0.6s ease-out;
+}
+@keyframes flash { 0% { opacity: 0.9; } 100% { opacity: 0; } }
+@keyframes tank-shake {
+  0%, 100% { transform: translate(0); }
+  25% { transform: translate(-6px, 3px); }
+  50% { transform: translate(6px, -3px); }
+  75% { transform: translate(-3px, -2px); }
+}
+
+.water.frenzy .fish:not(.decorative-fish) img { animation: frenzy-wiggle 0.22s ease-in-out infinite alternate; }
+.water.frenzy .bubbles span { animation-duration: 2.5s; }
+.water.frenzy { filter: saturate(1.4) brightness(1.1); }
+@keyframes frenzy-wiggle {
+  from { transform: scale(var(--grow)) rotate(-8deg); }
+  to   { transform: scale(calc(var(--grow) * 1.08)) rotate(8deg); }
+}
+
+.fish.lucky { z-index: 3; }
+.fish.lucky img { animation: lucky 0.5s ease-in-out infinite alternate; }
+@keyframes lucky {
+  from { filter: drop-shadow(0 0 10px #ffe27a); transform: scale(var(--grow)); }
+  to   { filter: drop-shadow(0 0 32px #fff2a8) brightness(1.3); transform: scale(calc(var(--grow) * 1.25)); }
+}
+
+.aquarium-page { transition: opacity 0.5s; }
+body.leaving .aquarium-page { opacity: 0; }
+
+.food-button:disabled { opacity: 0.7; cursor: wait; }
